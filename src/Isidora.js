@@ -18,15 +18,20 @@ document.getElementById("allineamento").innerHTML = allineamento;
 
 // Punteggi caratteristica
 var budget = 27;
+var budgetAggiunto = 0;
 
-if (livello >= 5) {
-    budget += 4;
+if (livello >= 4) {
+    budgetAggiunto += 2;
+} else if (livello >= 8) {
+    budgetAggiunto += 4;
 } else if (livello >= 10) {
-    budget += 8;
-} else if (livello >= 15) {
-    budget += 12;
-} else if (livello >= 20) {
-    budget += 16;
+    budgetAggiunto += 6;
+} else if (livello >= 12) {
+    budgetAggiunto += 8;
+} else if (livello >= 16) {
+    budgetAggiunto += 9;
+} else if (livello >= 19) {
+    budgetAggiunto += 10;
 }
 
 var forza = 13;
@@ -50,13 +55,19 @@ let modMigliorato = [forMigliorata, desMigliorata, cosMigliorata, intMigliorata,
 
 for (var i=0; i< punteggio.length; i++) {
     modificatore[i] = Math.trunc((punteggio[i] - 10) / 2);
-    if (punteggio[i] > 13) {
-        budget -= 5;
-        budget -= (punteggio[i] - 13) * 2;
-    } else if (punteggio[i] > 8) {
-        budget -= (punteggio[i] - 8);
+    if (budget > 0) {
+        if (punteggio[i] > 13) {
+            budget -= 5;
+            budget -= (punteggio[i] - 13) * 2;
+        } else if (punteggio[i] > 8) {
+            budget -= (punteggio[i] - 8);
+        }
+    } else {
+        budgetAggiunto -= (punteggio[i] - 8);
     }
+    budget += budgetAggiunto;
 }
+
 for (var i=0; i< pMigliorato.length; i++) {
     modMigliorato[i] = Math.trunc((pMigliorato[i] - 10) / 2);
 }
@@ -66,10 +77,6 @@ if (budget == 0) {
 } else {
     document.getElementById("controlloPunteggi").innerHTML = "Budget "+budget;
 }
-
-var bonusStamina = 5 + modMigliorato[2];
-var bonusFerita = 5;
-var gradiAbilita = 4 + modMigliorato[3];
 
 document.getElementById("pFor").innerHTML = pMigliorato[0];
 document.getElementById("modFor").innerHTML = modMigliorato[0];
