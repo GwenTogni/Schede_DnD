@@ -14,7 +14,14 @@ document.getElementById("velocita").innerHTML = velocita + "m";
 document.getElementById("allineamento").innerHTML = allineamento;
 
 // Punteggi classe
-var slot0 = 6;
+var numeroIncantesimi0 = 4;
+var numeroIncantesimi1 = 2;
+var numeroIncantesimi2 = 0;
+var numeroIncantesimi3 = 0;
+var numeroIncantesimi4 = 0;
+var numeroIncantesimi5 = 0;
+var numeroIncantesimi6 = 0;
+
 var slot1 = 2;
 var slot2 = 0;
 var slot3 = 0;
@@ -34,65 +41,89 @@ for (var i=0; i<livello; i++) {
     if (i == 2) {
         bab++;
         modVolonta++;
+        numeroIncantesimi0++;
+        numeroIncantesimi1++;
     } else if (i == 3) {
         bab++;
         modTempra++;
         modRiflessi++;
         slot1++;
+        numeroIncantesimi0++;
+        numeroIncantesimi1++;
     }else if (i == 4) {
         bab++;
         modVolonta+=2;
         slot2++;
+        numeroIncantesimi2+=2;
     } else if (i == 5) {
         slot1++;
+        numeroIncantesimi2++;
     } else if (i == 6) {
         bab++;
         modTempra++;
         modRiflessi++;
         modVolonta++;
         slot2++;
+        numeroIncantesimi2++;
     } else if (i == 7) {
         bab++;
         slot3+=2;
+        numeroIncantesimi1++;
+        numeroIncantesimi3+=2;
     } else if (i == 8) {
         bab++;
         modVolonta++;
         slot2++;
+        numeroIncantesimi3++;
     } else if (i == 9) {
         modTempra++;
         modRiflessi++;
         slot3++;
+        numeroIncantesimi3++;
     } else if (i == 10) {
         bab++;
         modVolonta++;
         slot4+=2;
+        numeroIncantesimi2++;
+        numeroIncantesimi4+=2;
     } else if (i == 11) {
         bab++;
         slot3++;
+        numeroIncantesimi1++;
     } else if (i == 12) {
         bab++;
         modTempra++;
         modRiflessi++;
         modVolonta++;
+        numeroIncantesimi4++;
     } else if (i == 13) {
         slot5+=2;
+        numeroIncantesimi3++;
+        numeroIncantesimi5+=2;
     } else if (i == 14) {
         bab++;
         modVolonta++;
         slot2++;
         slot4++;
+        numeroIncantesimi2++;
+        numeroIncantesimi5++;
     } else if (i == 15) {
         bab++;
         modTempra++;
         modRiflessi++;
         slot3++;
         slot5++;
+        contaIncantesimi5++;
     } else if (i == 16) {
         bab++;
         modVolonta++;
         slot6+=2;
+        numeroIncantesimi4++;
+        numeroIncantesimi6+=2;
     } else if (i == 17) {
         slot5++;
+        numeroIncantesimi3++;
+        numeroIncantesimi6++;
     } else if (i == 18) {
         bab++;
         modTempra++;
@@ -100,14 +131,18 @@ for (var i=0; i<livello; i++) {
         modVolonta++
         slot4++;
         slot6++;
+        numeroIncantesimi6++;
     } else if (i == 19) {
         bab++;
         slot5++;
         slot6++;
+        numeroIncantesimi5++;
     } else if (i == 20) {
         bab++;
         modVolonta++;
         slot6++;
+        numeroIncantesimi4++;
+        numeroIncantesimi6++;
     }
 }
 
@@ -350,36 +385,43 @@ document.getElementById("xp").innerHTML = xp;
 document.getElementById("xpLivello").innerHTML = xpLivello;
 
 // Incantesimi
-document.getElementById("slot0").innerHTML = slot0;
+var contaIncantesimi0 = 0;
+var contaIncantesimi1 = 0;
+var contaIncantesimi2 = 0;
+var contaIncantesimi3 = 0;
+var contaIncantesimi4 = 0;
+var contaIncantesimi5 = 0;
+var contaIncantesimi6 = 0;
+
 document.getElementById("slot1").innerHTML = slot1;
 document.getElementById("slot2").innerHTML = slot2;
 document.getElementById("slot3").innerHTML = slot3;
 
 // Livello 0
-var incantesimo01 = ["frastornare", 1+" AZ", 1+" round", 12+" m", 0]
-var incantesimo02 = ["individuazione del magico", 1+" min", 1+" round", 18+" m", 0]
-var incantesimo03 = ["mano psicocinetica", 1+" AZ", 1+" round", 12+" m", 0]
-var incantesimo04 = ["messaggio telepatico", 1+" AZ", 10+" min", 30 + 3*livello +" m", 1+" d"+4]
-var incantesimo05 = ["riparare", 10+" min", "istantaneo", 3+" m", 0]
-var incantesimo06 = ["raggio di energia", 1+" AZ", "istantaneo", 12+" m", 0]
+var incantesimo01 = ["frastornare", 1+" AZ", 1+" round", 12+" m", 0]; contaIncantesimi0++;
+var incantesimo02 = ["individuazione del magico", 1+" min", 1+" round", 18+" m", 0]; contaIncantesimi0++;
+var incantesimo03 = ["mano psicocinetica", 1+" AZ", 1+" round", 12+" m", 0]; contaIncantesimi0++;
+var incantesimo04 = ["messaggio telepatico", 1+" AZ", 10+" min", 30 + 3*livello +" m", 1+" d"+4]; contaIncantesimi0++;
+var incantesimo05 = ["riparare", 10+" min", "istantaneo", 3+" m", 0]; contaIncantesimi0++;
+var incantesimo06 = ["raggio di energia", 1+" AZ", "istantaneo", 12+" m", 0]; contaIncantesimi0++;
 
 // Livello 1
-var incantesimo11 = ["camuffare se stesso", 1+" AZ", 10+" min", 0, 0]
-var incantesimo12 = ["controllo a distanza", 1+" AZ", 1+" round", 18+" m", 0]
-var incantesimo13 = ["conoscere le coordinate", 1+" AZ", "istantaneo", "-", 0]
-var incantesimo14 = ["ondata elettrica", 1+" AZ", "istantaneo", "creatura", 4+" d"+6]
-var incantesimo15 = ["identificare", 1+" AZ", 1+" round", 1.5+" m", 0]
+var incantesimo11 = ["camuffare se stesso", 1+" AZ", 10+" min", 0, 0]; contaIncantesimi1++;
+var incantesimo12 = ["controllo a distanza", 1+" AZ", 1+" round", 18+" m", 0]; contaIncantesimi1++;
+var incantesimo13 = ["conoscere le coordinate", 1+" AZ", "istantaneo", "-", 0]; contaIncantesimi1++;
+var incantesimo14 = ["ondata elettrica", 1+" AZ", "istantaneo", "creatura", 4+" d"+6]; contaIncantesimi1++;
+var incantesimo15 = ["identificare", 1+" AZ", 1+" round", 1.5+" m", 0]; contaIncantesimi1++;
 
 // Livello 2
-var incantesimo21 = ["bomba logica", 1+" AZ", 1*livello+" round", "contatto", 6+" d"+6]
-var incantesimo22 = ["invisibilità", 1+" AZ", 1+" min", "contatto", 0]
-var incantesimo23 = ["sigillo di sicurezza", 1+" AZ", 24+" h", 9+" m2", 0]
-var incantesimo24 = ["rete laser", 1+" AZ", 1*livello+" min", 30 + 3*livello+" m", 1+" d"+6+" + "+1]
+var incantesimo21 = ["bomba logica", 1+" AZ", 1*livello+" round", "contatto", 6+" d"+6]; contaIncantesimi2++;
+var incantesimo22 = ["invisibilità", 1+" AZ", 1+" min", "contatto", 0]; contaIncantesimi2++;
+var incantesimo23 = ["sigillo di sicurezza", 1+" AZ", 24+" h", 9+" m2", 0]; contaIncantesimi2++;
+var incantesimo24 = ["rete laser", 1+" AZ", 1*livello+" min", 30 + 3*livello+" m", 1+" d"+6+" + "+1]; contaIncantesimi2++;
 
 // Livello 3
-var incantesimo31 = ["orientarsi nella navigazione", 1+" round", 1*livello+" h", 7.5 + 1.5 * Math.trunc(livello/2) +" m", "+ "+10+" pilotare"]
-var incantesimo32 = ["distorsione", 1+" AZ", 1*livello+" round", "contatto", "+ "+50+"% elusione"]
-var incantesimo33 = ["ondata ad arco", 1+" AZ", "istantaneo", 36+" m", 10+" d"+6]
+var incantesimo31 = ["orientarsi nella navigazione", 1+" round", 1*livello+" h", 7.5 + 1.5 * Math.trunc(livello/2) +" m", "+ "+10+" pilotare"]; contaIncantesimi3++;
+var incantesimo32 = ["distorsione", 1+" AZ", 1*livello+" round", "contatto", "+ "+50+"% elusione"]; contaIncantesimi3++;
+var incantesimo33 = ["ondata ad arco", 1+" AZ", "istantaneo", 36+" m", 10+" d"+6]; contaIncantesimi3++;
 
 // Livello 0
 document.getElementById("incantesimo01").innerHTML = incantesimo01[0];
@@ -492,3 +534,9 @@ document.getElementById("inc33Tempo").innerHTML = incantesimo33[1];
 document.getElementById("inc33Durata").innerHTML = incantesimo33[2];
 document.getElementById("inc33Gitt").innerHTML = incantesimo33[3];
 document.getElementById("inc33Danno").innerHTML = incantesimo33[4];
+
+if (contaIncantesimi0 == numeroIncantesimi0 && contaIncantesimi1 == numeroIncantesimi1 && contaIncantesimi2 == numeroIncantesimi2 && contaIncantesimi3 == numeroIncantesimi3 && contaIncantesimi4 == numeroIncantesimi4 && contaIncantesimi5 == numeroIncantesimi5 && contaIncantesimi6 == numeroIncantesimi6) {
+    document.getElementById("controlloIncantesimi").style.display = "none";
+} else {
+    document.getElementById("controlloIncantesimi").innerHTML = "ERRORE. Numero incantesimi errato! " + numeroIncantesimi0 +" "+ numeroIncantesimi1 +" "+ numeroIncantesimi2 +" "+ numeroIncantesimi3 +" "+ numeroIncantesimi4 +" "+ numeroIncantesimi5 +" "+ numeroIncantesimi6;
+}
