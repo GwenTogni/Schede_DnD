@@ -13,13 +13,85 @@ document.getElementById("taglia").innerHTML = taglia;
 document.getElementById("velocita").innerHTML = velocita + "m";
 document.getElementById("allineamento").innerHTML = allineamento;
 
+// Punteggi classe
+// const BONUS_STAMINA = 5 + modMigliorato[2];
+// const BONUS_FERITA = 5;
+// const GRADI_ABILITA = 4 + modMigliorato[3];
+
+var bab = 0;
+var modTempra = 0;
+var modRiflessi = 0;
+var modVolonta = 2;
+
+for (var i=0; i<livello; i++) {
+    if (i == 2) {
+        bab++;
+        modVolonta++;
+    } else if (i == 3) {
+        bab++;
+        modTempra++;
+        modRiflessi++;
+    }else if (i == 4) {
+        bab++;
+        modVolonta++;
+    } else if (i == 6) {
+        bab++;
+        modTempra++;
+        modRiflessi++;
+        modVolonta++;
+    } else if (i == 7) {
+        bab++;
+    } else if (i == 8) {
+        bab++;
+        modVolonta++;
+    } else if (i == 9) {
+        modTempra++;
+        modRiflessi++;
+    } else if (i == 10) {
+        bab++;
+        modVolonta++;
+    } else if (i == 11) {
+        bab++;
+    } else if (i == 12) {
+        bab++;
+        modTempra++;
+        modRiflessi++;
+        modVolonta++;
+    } else if (i == 14) {
+        bab++;
+        modVolonta++;
+    } else if (i == 15) {
+        bab++;
+        modTempra++;
+        modRiflessi++;
+    } else if (i == 16) {
+        bab++;
+        modVolonta++;
+    } else if (i == 18) {
+        bab++;
+        modTempra++;
+        modRiflessi++;
+        modVolonta++
+    } else if (i == 19) {
+        bab++;
+    } else if (i == 20) {
+        bab++;
+        modVolonta++;
+    }
+}
+
 // Punteggi caratteristica
+var budget = 27;
+for (var i=livello; i>0; i-=5) {
+        budget += 4;
+}
+
 var forza = 14;
 var destrezza = 17;
 var costituzione = 14;
 var intelligenza = 14;
-var saggezza = 7;
-var carisma = 7;
+var saggezza = 9;
+var carisma = 8;
 
 let forMigliorata = forza;
 let desMigliorata = destrezza;
@@ -35,9 +107,21 @@ let modMigliorato = [forMigliorata, desMigliorata, cosMigliorata, intMigliorata,
 
 for (var i=0; i< punteggio.length; i++) {
     modificatore[i] = Math.trunc((punteggio[i] - 10) / 2);
+    if (punteggio[i] > 13) {
+        budget -= 5;
+        budget -= (punteggio[i] - 13) * 2;
+    } else if (punteggio[i] > 8) {
+        budget -= (punteggio[i] - 8);
+    }
 }
 for (var i=0; i< pMigliorato.length; i++) {
     modMigliorato[i] = Math.trunc((pMigliorato[i] - 10) / 2);
+}
+
+if (budget == 0) {
+    document.getElementById("controlloPunteggi").style.display="none"
+} else {
+    document.getElementById("controlloPunteggi").innerHTML = "Budget "+budget;
 }
 
 document.getElementById("pFor").innerHTML = pMigliorato[0];
@@ -102,13 +186,9 @@ document.getElementById("cac").innerHTML = cac;
 document.getElementById("ca").innerHTML = ca;
 
 // Tiri salvezza
-var tsBaseTempra = 3;
-var tsBaseRiflessi = 3;
-var tsBaseVolonta = 6;
-
-var modTempra = 3;
-var modRiflessi = 3;
-var modVolonta = 6;
+var tsBaseTempra = modTempra;
+var tsBaseRiflessi = modRiflessi;
+var tsBaseVolonta = modVolonta;
 
 let tempra = tsBaseTempra + modTempra + modMigliorato[2];
 let riflessi = tsBaseRiflessi + modRiflessi + modMigliorato[1];
@@ -119,8 +199,6 @@ document.getElementById("riflessi").innerHTML = riflessi;
 document.getElementById("volonta").innerHTML = volonta;
 
 // Bonus attacco
-var bab = 6;
-
 let baMischia = bab + modMigliorato[0];
 let baDist = bab + modMigliorato[1];
 let baLancio = bab + modMigliorato[0];
@@ -135,9 +213,16 @@ const MOD = [1,0,5,3,3,5,1,3,5,4,3,4,4,1,3,5,1,3,3,4];
 var grado = [5,6,7,5,2,3,3,4,2,7,0,0,5,3,4,3,4,0,0,0];
 var bonus = [0,0,0,3,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,1];
 var mVari = [0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0];
+let somma = 0;
+
 for (var i=0; i<abilita.length; i++) {
     abilita[i] = grado[i] + bonus[i] + modMigliorato[MOD[i]] + mVari[i];
+    somma += grado[i];
 }
+gradiAbiilitaTot = (4 + modMigliorato[3]) * livello;
+
+document.getElementById("gradiAbilita").innerHTML = 4 + modMigliorato[3];
+document.getElementById("gradiAbilitaTot").innerHTML = gradiAbiilitaTot;
 
 document.getElementById("acrobazia").innerHTML = abilita[0];
 document.getElementById("atletica").innerHTML = abilita[1];
@@ -159,6 +244,16 @@ document.getElementById("rapiditaDiMano").innerHTML = abilita[16];
 document.getElementById("scienzaBiologica").innerHTML = abilita[17];
 document.getElementById("scienzaFisica").innerHTML = abilita[18];
 document.getElementById("sopravvivenza").innerHTML = abilita[19];
+
+if (somma == gradiAbiilitaTot) {
+    document.getElementById("controlloGradi").style.display = "none";
+} else {
+    if (somma < gradiAbiilitaTot) {
+        document.getElementById("controlloGradi").innerHTML = "ERRORE nei calcoli! Aggiungi "+(gradiAbiilitaTot - somma);
+    } else {
+        document.getElementById("controlloGradi").innerHTML = "ERRORE nei calcoli! Togli "+(somma - gradiAbiilitaTot);
+    }
+}
 
 // Armi
 document.getElementById("arma1").innerHTML = "pistola ad aghi tattica";
@@ -236,15 +331,15 @@ var incantesimo14 = ["ondata elettrica", 1+" AZ", "istantaneo", "creatura", 4+"d
 var incantesimo15 = ["identificare", 1+" AZ", 1+" round", 1.5+" m", 0]
 
 // Livello 2
-var incantesimo21 = ["frastornare", 1+" AZ", 1+" round", 12+" m", 0]
-var incantesimo22 = ["frastornare", 1+" AZ", 1+" round", 12+" m", 0]
-var incantesimo23 = ["frastornare", 1+" AZ", 1+" round", 12+" m", 0]
-var incantesimo24 = ["frastornare", 1+" AZ", 1+" round", 12+" m", 0]
+var incantesimo21 = ["bomba logica", 1+" AZ", 1*livello+" round", "contatto", 6+"d"+6]
+var incantesimo22 = ["invisibilità", 1+" AZ", 1+" min", "-", 0]
+var incantesimo23 = ["sigillo di sicurezza", 1+" AZ", 24+" h", 9+" m2", 0]
+var incantesimo24 = ["rete laser", 1+" AZ", 1*livello+" min", 30 + 3*livello+" m", 1+"d"+6+" + "+1]
 
 // Livello 3
-var incantesimo31 = ["frastornare", 1+" AZ", 1+" round", 12+" m", 0]
-var incantesimo32 = ["frastornare", 1+" AZ", 1+" round", 12+" m", 0]
-var incantesimo33 = ["frastornare", 1+" AZ", 1+" round", 12+" m", 0]
+var incantesimo31 = ["orientarsi nella navigazione", 1+" round", 1*livello+" h", 7.5 + 1.5 * Math.trunc(livello/2) +" m", "+ "+10+" pilotare"]
+var incantesimo32 = ["distorsione", 1+" AZ", 1*livello+" round", "contatto", "+ "+50+"% probabilità di schivare"]
+var incantesimo33 = ["ondata ad arco", 1+" AZ", "istantaneo", 36+" m", 10+" d"+6]
 
 // Livello 0
 document.getElementById("incantesimo01").innerHTML = incantesimo01[0];

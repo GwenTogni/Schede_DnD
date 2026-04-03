@@ -21,14 +21,17 @@ section {
 div {
     background-color: rgb(102, 112, 68);
     padding: 30px;
-    margin: 5px 5px 0 0;
+    margin: 0 0 5px 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
 }
 
 td {
     padding: 10px;
-    border: 1px solid;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 th {
+    color: rgba(255, 255, 255, 0.6);
     padding: 10px;
     text-align: left;
 }
@@ -44,4 +47,9 @@ a {
 }
 a:hover {
     color: rgb(220, 237, 159);
+}
+
+.segnale {
+    background-color: #851a1a;
+    border: 1px solid;
 }
