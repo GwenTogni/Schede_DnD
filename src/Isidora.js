@@ -1,10 +1,11 @@
 // Personaggio
-var classe = "tecnomante";
-var razza = "androide";
-var livello = 9;
+var classe = "-";
+var background = "nobile";
+var razza = "umana";
+var livello = 1;
 var taglia = "media";
 var velocita = 9;
-var allineamento = "N";
+var allineamento = "CB";
 
 document.getElementById("classe").innerHTML = classe;
 document.getElementById("razza").innerHTML = razza;
@@ -13,159 +14,32 @@ document.getElementById("taglia").innerHTML = taglia;
 document.getElementById("velocita").innerHTML = velocita + "m";
 document.getElementById("allineamento").innerHTML = allineamento;
 
-// Punteggi classe
-var numeroIncantesimi0 = 4;
-var numeroIncantesimi1 = 2;
-var numeroIncantesimi2 = 0;
-var numeroIncantesimi3 = 0;
-var numeroIncantesimi4 = 0;
-var numeroIncantesimi5 = 0;
-var numeroIncantesimi6 = 0;
-
-var slot1 = 2;
-var slot2 = 0;
-var slot3 = 0;
-var slot4 = 0;
-var slot5 = 0;
-var slot6 = 0;
-
-var bab = 0;
-var modTempra = 0;
-var modRiflessi = 0;
-var modVolonta = 2;
-
-var bonusEnergia = 0;
-var bonusCinetica = 1;
-
+// Punteggi caratteristica
 var budget = 27;
 
-for (var i=0; i<=livello; i++) {
-    if (i == 2) {
-        bab++;
-        modVolonta++;
-        numeroIncantesimi0++;
-        numeroIncantesimi1++;
-    } else if (i == 3) {
-        bab++;
-        modTempra++;
-        modRiflessi++;
-        slot1++;
-        numeroIncantesimi0++;
-        numeroIncantesimi1++;
-    }else if (i == 4) {
-        bab++;
-        modVolonta+=2;
-        slot2++;
-        numeroIncantesimi2+=2;
-    } else if (i == 5) {
-        slot1++;
-        numeroIncantesimi2++;
-        budget += 4;
-    } else if (i == 6) {
-        bab++;
-        modTempra++;
-        modRiflessi++;
-        modVolonta++;
-        slot2++;
-        numeroIncantesimi2++;
-    } else if (i == 7) {
-        bab++;
-        slot3+=2;
-        numeroIncantesimi1++;
-        numeroIncantesimi3+=2;
-    } else if (i == 8) {
-        bab++;
-        modVolonta++;
-        slot2++;
-        numeroIncantesimi3++;
-    } else if (i == 9) {
-        modTempra++;
-        modRiflessi++;
-        slot3++;
-        numeroIncantesimi3++;
-    } else if (i == 10) {
-        bab++;
-        modVolonta++;
-        slot4+=2;
-        numeroIncantesimi2++;
-        numeroIncantesimi4+=2;
-        budget += 4;
-    } else if (i == 11) {
-        bab++;
-        slot3++;
-        numeroIncantesimi1++;
-    } else if (i == 12) {
-        bab++;
-        modTempra++;
-        modRiflessi++;
-        modVolonta++;
-        numeroIncantesimi4++;
-    } else if (i == 13) {
-        slot5+=2;
-        numeroIncantesimi3++;
-        numeroIncantesimi5+=2;
-    } else if (i == 14) {
-        bab++;
-        modVolonta++;
-        slot2++;
-        slot4++;
-        numeroIncantesimi2++;
-        numeroIncantesimi5++;
-    } else if (i == 15) {
-        bab++;
-        modTempra++;
-        modRiflessi++;
-        slot3++;
-        slot5++;
-        contaIncantesimi5++;
-        budget += 4;
-    } else if (i == 16) {
-        bab++;
-        modVolonta++;
-        slot6+=2;
-        numeroIncantesimi4++;
-        numeroIncantesimi6+=2;
-    } else if (i == 17) {
-        slot5++;
-        numeroIncantesimi3++;
-        numeroIncantesimi6++;
-    } else if (i == 18) {
-        bab++;
-        modTempra++;
-        modRiflessi++;
-        modVolonta++
-        slot4++;
-        slot6++;
-        numeroIncantesimi6++;
-    } else if (i == 19) {
-        bab++;
-        slot5++;
-        slot6++;
-        numeroIncantesimi5++;
-    } else if (i == 20) {
-        bab++;
-        modVolonta++;
-        slot6++;
-        numeroIncantesimi4++;
-        numeroIncantesimi6++;
-        budget += 4;
-    }
+if (livello == 5) {
+    budget += 4;
+} else if (livello == 10) {
+    budget += 8;
+} else if (livello == 15) {
+    budget += 12;
+} else if (livello == 20) {
+    budget += 16;
 }
 
-// Punteggi caratteristica
-var forza = 14;
-var destrezza = 15;
-var costituzione = 14;
-var intelligenza = 14;
+var forza = 13;
+var destrezza = 13;
+var costituzione = 13;
+var intelligenza = 15;
 var saggezza = 9;
-var carisma = 8;
+var carisma = 10;
 
-let forMigliorata = forza;
-let desMigliorata = destrezza;
-let cosMigliorata = costituzione;
-let intMigliorata = intelligenza + 2;
-let sagMigliorata = saggezza;
-let carMigliorata = carisma;
+let forMigliorata = forza + 1;
+let desMigliorata = destrezza + 1;
+let cosMigliorata = costituzione + 1;
+let intMigliorata = intelligenza + 1;
+let sagMigliorata = saggezza + 1;
+let carMigliorata = carisma + 1;
 
 var punteggio = [forza, destrezza, costituzione, intelligenza, saggezza, carisma];
 let modificatore = [forza, destrezza, costituzione, intelligenza, saggezza, carisma];
@@ -212,178 +86,91 @@ document.getElementById("modCar").innerHTML = modMigliorato[5];
 var modVariIniz = 11;
 var d20 = Math.round(Math.random() * 20);
 
-let totBonusIniz = modVariIniz + modMigliorato[1];
+let totBonusIniz = modMigliorato[1];
 let iniziativa = totBonusIniz + d20;
 
-document.getElementById("totBonusIniz").innerHTML = totBonusIniz;
 document.getElementById("d20").innerHTML = d20;
+document.getElementById("totBonusIniz").innerHTML = totBonusIniz;
 document.getElementById("iniziativa").innerHTML = iniziativa;
 
-// Salute e risolutezza
+// Salute
 var danni = 0;
 
-let ferita = bonusFerita * livello;
-let risolutezza = Math.trunc(livello / 2 + modMigliorato[3]);
-let stamina = bonusStamina * livello;
-
-let risolutezzaAttuali = risolutezza;
+let ferita = 10;
 let feritaAttuali = ferita;
-let staminaAttuali = stamina;
 
-if (danni <= stamina) {
-    staminaAttuali = stamina - danni;
-} else {
-    staminaAttuali = 0;
-    feritaAttuali = ferita - (danni - stamina);
-}
+feritaAttuali = ferita - danni;
 
-document.getElementById("pStamina").innerHTML = stamina;
 document.getElementById("pFerita").innerHTML = ferita;
-document.getElementById("pRisolutezza").innerHTML = risolutezza;
-document.getElementById("pStaminaAttuali").innerHTML = staminaAttuali;
 document.getElementById("pFeritaAttuali").innerHTML = feritaAttuali;
-document.getElementById("pRisolutezzaAttuali").innerHTML = risolutezzaAttuali;
 
 // Classe armatura
-let cae = 10 + bonusEnergia + modMigliorato[1];
-let cac = 10 + bonusCinetica + modMigliorato[1];
-let ca = 8 + cac;
+let ca = modMigliorato[0];
 
-document.getElementById("cae").innerHTML = cae;
-document.getElementById("cac").innerHTML = cac;
 document.getElementById("ca").innerHTML = ca;
 
 // Tiri salvezza
-var tsBaseTempra = modTempra;
-var tsBaseRiflessi = modRiflessi;
-var tsBaseVolonta = modVolonta;
+var tsFor = modMigliorato[0];
+var tsDes = modMigliorato[1];
+var tsCos = modMigliorato[2];
+var tsInt = modMigliorato[3];
+var tsSag = modMigliorato[4];
+var tsCar = modMigliorato[5];
 
-let tempra = tsBaseTempra + modTempra + modMigliorato[2];
-let riflessi = tsBaseRiflessi + modRiflessi + modMigliorato[1];
-let volonta = tsBaseVolonta + modVolonta + modMigliorato[4];
-
-document.getElementById("tempra").innerHTML = tempra;
-document.getElementById("riflessi").innerHTML = riflessi;
-document.getElementById("volonta").innerHTML = volonta;
-
-// Bonus attacco
-let baMischia = bab + modMigliorato[0];
-let baDist = bab + modMigliorato[1];
-let baLancio = bab + modMigliorato[0];
-
-document.getElementById("baMischia").innerHTML = baMischia;
-document.getElementById("baDist").innerHTML = baDist;
-document.getElementById("baLancio").innerHTML = baLancio;
+document.getElementById("tsFor").innerHTML = tsFor;
+document.getElementById("tsDes").innerHTML = tsDes;
+document.getElementById("tsCos").innerHTML = tsCos;
+document.getElementById("tsInt").innerHTML = tsInt;
+document.getElementById("tsSag").innerHTML = tsSag;
+document.getElementById("tsCar").innerHTML = tsCar;
 
 // Abilità
-var abilita = [acrobazia, atletica, camuffare, computer, cultura, diplomazia, furtivita, ingegneria, intimidire, intuizione, medicina, misticismo, percezione, pilotare, professione, raggirare, rapiditaDiMano, scienzaBiologica, scienzaFisica, sopravvivenza];
-const MOD = [1,0,5,3,3,5,1,3,5,4,3,4,4,1,3,5,1,3,3,4];
-var grado = [5,6,7,5,2,3,3,4,2,7,0,0,5,3,4,3,4,0,0,0];
-var bonus = [0,0,0,3,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,1];
-var mVari = [0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0];
+var abilita = [acrobazia, addestrareAnimali, arcano, atletica, furtivita, indagare, inganno, intimidire, intrattenere, intuizione, medicina, natura, percezione, persuasione, rapiditaDiMano, religione, sopravvivenza, storia];
+const MOD = [1,4,3,0,1,3,5,5,5,4,4,3,4,5,1,3,4,3];
+var bonus = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 let somma = 0;
 
 for (var i=0; i<abilita.length; i++) {
-    abilita[i] = grado[i] + bonus[i] + modMigliorato[MOD[i]] + mVari[i];
-    somma += grado[i];
+    abilita[i] = bonus[i] + modMigliorato[MOD[i]];
 }
-gradiAbiilitaTot = (4 + modMigliorato[3]) * livello;
-
-document.getElementById("gradiAbilita").innerHTML = 4 + modMigliorato[3];
-document.getElementById("gradiAbilitaTot").innerHTML = gradiAbiilitaTot;
 
 document.getElementById("acrobazia").innerHTML = abilita[0];
-document.getElementById("atletica").innerHTML = abilita[1];
-document.getElementById("camuffare").innerHTML = abilita[2];
-document.getElementById("computer").innerHTML = abilita[3];
-document.getElementById("cultura").innerHTML = abilita[4];
-document.getElementById("diplomazia").innerHTML = abilita[5];
-document.getElementById("furtivita").innerHTML = abilita[6];
-document.getElementById("ingegneria").innerHTML = abilita[7];
-document.getElementById("intimidire").innerHTML = abilita[8];
+document.getElementById("addestrareAnimali").innerHTML = abilita[1];
+document.getElementById("arcano").innerHTML = abilita[2];
+document.getElementById("atletica").innerHTML = abilita[3];
+document.getElementById("furtivita").innerHTML = abilita[4];
+document.getElementById("indagare").innerHTML = abilita[5];
+document.getElementById("inganno").innerHTML = abilita[6];
+document.getElementById("intimidire").innerHTML = abilita[7];
+document.getElementById("intrattenere").innerHTML = abilita[8];
 document.getElementById("intuizione").innerHTML = abilita[9];
 document.getElementById("medicina").innerHTML = abilita[10];
-document.getElementById("misticismo").innerHTML = abilita[11];
+document.getElementById("natura").innerHTML = abilita[11];
 document.getElementById("percezione").innerHTML = abilita[12];
-document.getElementById("pilotare").innerHTML = abilita[13];
-document.getElementById("professione").innerHTML = abilita[14];
-document.getElementById("raggirare").innerHTML = abilita[15];
-document.getElementById("rapiditaDiMano").innerHTML = abilita[16];
-document.getElementById("scienzaBiologica").innerHTML = abilita[17];
-document.getElementById("scienzaFisica").innerHTML = abilita[18];
-document.getElementById("sopravvivenza").innerHTML = abilita[19];
+document.getElementById("persuasione").innerHTML = abilita[13];
+document.getElementById("rapiditaDiMano").innerHTML = abilita[14];
+document.getElementById("religione").innerHTML = abilita[15];
+document.getElementById("sopravvivenza").innerHTML = abilita[16];
+document.getElementById("storia").innerHTML = abilita[17];
 
-if (somma == gradiAbiilitaTot) {
-    document.getElementById("controlloGradi").style.display = "none";
-} else {
-    if (somma < gradiAbiilitaTot) {
-        document.getElementById("controlloGradi").innerHTML = "ERRORE nei calcoli! Aggiungi "+(gradiAbiilitaTot - somma);
-    } else {
-        document.getElementById("controlloGradi").innerHTML = "ERRORE nei calcoli! Togli "+(somma - gradiAbiilitaTot);
-    }
-}
-
-// Armi
-var arma1 = ["pistola ad aghi tattica", 1, 1+" d"+4, "iniezione CD +"+2, 12, "piccola, a mano", 8+" dardi / "+1, "analogica, iniezione"];
-var arma2 = ["shuriken con scanalature", 1, 1+" d"+8, "sanguinamento + "+1+" d"+4, 6, "speciale, una mano", "-", "lancio, ricarica rapida"];
-
-document.getElementById("arma1").innerHTML = arma1[0];
-document.getElementById("arma1Liv").innerHTML = arma1[1];
-document.getElementById("arma1Danno").innerHTML = arma1[2];
-document.getElementById("arma1Critico").innerHTML = arma1[3];
-document.getElementById("arma1Gitt").innerHTML = arma1[4];
-document.getElementById("arma1Tipo").innerHTML = arma1[5];
-document.getElementById("arma1Uso").innerHTML = arma1[6];
-document.getElementById("arma1Sp").innerHTML = arma1[7];
-
-document.getElementById("arma2").innerHTML = arma2[0];
-document.getElementById("arma2Liv").innerHTML = arma2[1];
-document.getElementById("arma2Danno").innerHTML = arma2[2];
-document.getElementById("arma2Critico").innerHTML = arma2[3];
-document.getElementById("arma2Gitt").innerHTML = arma2[4];
-document.getElementById("arma2Tipo").innerHTML = arma2[5];
-document.getElementById("arma2Uso").innerHTML = arma2[6];
-document.getElementById("arma2Sp").innerHTML = arma2[7];
-
-// Capacità
-document.getElementById("capacita1").innerHTML = "visione crepuscolare";
-document.getElementById("capacita2").innerHTML = "matrice imitativa";
-document.getElementById("capacita3").innerHTML = "poliglotta";
-document.getElementById("capacita4").innerHTML = "conoscenza specialistica";
-document.getElementById("capacita5").innerHTML = "cacciatore rapido";
-document.getElementById("capacita6").innerHTML = "cache incantesimi";
+// Privilegi e tratti
 
 // Linguaggi
-document.getElementById("lingua1").innerHTML = "galattico";
-document.getElementById("lingua2").innerHTML = "terran";
-document.getElementById("lingua3").innerHTML = "vesk";
-document.getElementById("lingua4").innerHTML = "elfico";
-document.getElementById("lingua5").innerHTML = "isoki";
-document.getElementById("lingua6").innerHTML = "akiton";
+var lingua = ["comune", "draconico"]
+
+document.getElementById("lingua1").innerHTML = lingua[0];
+document.getElementById("lingua2").innerHTML = lingua[1];
 
 // Equipaggiamento
-document.getElementById("equip1").innerHTML = "computer";
-document.getElementById("equip2").innerHTML = "microfono registratore";
-document.getElementById("equip3").innerHTML = "kit attrezzi";
-document.getElementById("equip4").innerHTML = "torcia";
 
 // Crediti
-var crediti = 2500;
+var crediti = 0;
 document.getElementById("crediti").innerHTML = crediti;
-
-// Capacità trasporto
-let trasporto = Math.trunc(modMigliorato[0] / 2);
-
-document.getElementById("trasportoNonIng").innerHTML = "< " + trasporto;
-document.getElementById("trasportoIng").innerHTML = "> " + trasporto;
-document.getElementById("trasportoSov").innerHTML = "> " + modMigliorato[0];
 
 // Punti esperienza
 var xp = 0;
-var xpLivello = 0;
 
 document.getElementById("xp").innerHTML = xp;
-document.getElementById("xpLivello").innerHTML = xpLivello;
 
 // Incantesimi
 var contaIncantesimi0 = 0;
@@ -423,7 +210,6 @@ var incantesimo24 = ["rete laser", 1+" AZ", 1*livello+" min", 30 + 3*livello+" m
 var incantesimo31 = ["orientarsi nella navigazione", 1+" round", 1*livello+" h", 7.5 + 1.5 * Math.trunc(livello/2) +" m", "+ "+10+" pilotare"]; contaIncantesimi3++;
 var incantesimo32 = ["distorsione", 1+" AZ", 1*livello+" round", "contatto", "+ "+50+"% elusione"]; contaIncantesimi3++;
 var incantesimo33 = ["ondata ad arco", 1+" AZ", "istantaneo", 36+" m", 10+" d"+6]; contaIncantesimi3++;
-var incantesimo34 = ["ondata ad arco", 1+" AZ", "istantaneo", 36+" m", 10+" d"+6]; contaIncantesimi3++;
 
 // Livello 0
 document.getElementById("incantesimo01").innerHTML = incantesimo01[0];
@@ -536,12 +322,6 @@ document.getElementById("inc33Tempo").innerHTML = incantesimo33[1];
 document.getElementById("inc33Durata").innerHTML = incantesimo33[2];
 document.getElementById("inc33Gitt").innerHTML = incantesimo33[3];
 document.getElementById("inc33Danno").innerHTML = incantesimo33[4];
-
-document.getElementById("incantesimo34").innerHTML = incantesimo34[0];
-document.getElementById("inc34Tempo").innerHTML = incantesimo34[1];
-document.getElementById("inc34Durata").innerHTML = incantesimo34[2];
-document.getElementById("inc34Gitt").innerHTML = incantesimo34[3];
-document.getElementById("inc34Danno").innerHTML = incantesimo34[4];
 
 if (contaIncantesimi0 == numeroIncantesimi0 && contaIncantesimi1 == numeroIncantesimi1 && contaIncantesimi2 == numeroIncantesimi2 && contaIncantesimi3 == numeroIncantesimi3 && contaIncantesimi4 == numeroIncantesimi4 && contaIncantesimi5 == numeroIncantesimi5 && contaIncantesimi6 == numeroIncantesimi6) {
     document.getElementById("controlloIncantesimi").style.display = "none";

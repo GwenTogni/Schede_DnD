@@ -26,6 +26,10 @@ div {
     border-radius: 10px;
 }
 
+nav {
+    padding-left: 30px;
+}
+
 table {
     margin-bottom: 10px;
 }
@@ -50,6 +54,11 @@ a {
 }
 a:hover {
     color: rgb(220, 237, 159);
+}
+
+.titolo {
+    display: block;
+    padding: 30px;
 }
 
 .segnale {

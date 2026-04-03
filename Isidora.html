@@ -1,0 +1,381 @@
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="src/style.css" rel="stylesheet"/>
+    <title>DnD - Isidora Ducati</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" style="font-size: larger;">D&D</a>
+    </header>
+
+    <section class="titolo">
+        <h1>Isidora Ducati</h1>
+        <h2>Scheda personaggio</h2>
+    </section>
+        
+    <section>
+        <div>
+            <h3>Personaggio</h3>
+            <table>
+                <tr>
+                    <th>classe</td>
+                    <td>
+                        <a id="classe"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>razza</th>
+                    <td>
+                        <a id="razza"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>livello</th>
+                    <td id="livello"></td>
+                </tr>
+                <tr>
+                    <th>taglia</th>
+                    <td id="taglia"></td>
+                </tr>
+                <tr>
+                    <th>velocità</th>
+                    <td id="velocita"></td>
+                </tr>
+                <tr>
+                    <th>allineamento</th>
+                    <td id="allineamento"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <h3>Punteggi caratteristica</h3>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>punteggio</th>
+                    <th>modificatore</th>
+                </tr>
+                <tr>
+                    <th>FOR</th>
+                    <td id="pFor"></td>
+                    <td id="modFor"></td>
+                </tr>
+                <tr>
+                    <th>DES</th>
+                    <td id="pDes"></td>
+                    <td id="modDes"></td>
+                </tr>
+                <tr>
+                    <th>COS</th>
+                    <td id="pCos"></td>
+                    <td id="modCos"></td>
+                </tr>
+                <tr>
+                    <th>INT</th>
+                    <td id="pInt"></td>
+                    <td id="modInt"></td>
+                </tr>
+                <tr>
+                    <th>SAG</th>
+                    <td id="pSag"></td>
+                    <td id="modSag"></td>
+                </tr>
+                <tr>
+                    <th>CAR</th>
+                    <td id="pCar"></td>
+                    <td id="modCar"></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th class="segnale" id="controlloPunteggi"></th>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h3>Iniziativa</h3>
+        <table>
+            <tr>
+                <th>totale</th>
+                <th>d20</th>
+                <th>bonus</th>
+            </tr>
+            <tr>
+                <td id="iniziativa"></td>
+                <td id="d20"></td>
+                <td id="totBonusIniz"></td>
+            </tr>
+        </table>
+        </div>
+        <div>
+            <h3>Punti ferita</h3>
+            <table>
+                <tr>
+                    <th>totali</th>
+                    <th>attuali</th>
+                </tr>
+                <tr>
+                    <td id="pFerita"></td>
+                    <td id="pFeritaAttuali"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h3>Classe armatura</h3>
+            <table>
+                <tr>
+                    <th>CA</th>
+                    <td id="ca"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h3>Tiri salvezza</h3>
+            <table>
+                <tr>
+                    <th>Forza</th>
+                    <td id="tsFor"></td>
+                </tr>
+                <tr>
+                    <th>Destrezza</th>
+                    <td id="tsDes"></td>
+                </tr>
+                <tr>
+                    <th>Costituzione</th>
+                    <td id="tsCos"></td>
+                </tr>
+                <tr>
+                    <th>Intelligenza</th>
+                    <td id="tsInt"></td>
+                </tr>
+                <tr>
+                    <th>Saggezza</th>
+                    <td id="tsSag"></td>
+                </tr>
+                <tr>
+                    <th>Carisma</th>
+                    <td id="tsCar"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <h3>Armi</h3>
+            <table>
+                <tr>
+                    <th>ARMA</th>
+                    <th>livello</th>
+                    <th>danno</th>
+                    <th>critico</th>
+                    <th>gittata</th>
+                    <th>tipo</th>
+                    <th>munizioni/uso</th>
+                    <th>speciale</th>
+                </tr>
+                <!-- <tr>
+                    <td>
+                        <a></a>
+                    </td>
+                    <td id="arma1Liv"></td>
+                    <td id="arma1Danno"></td>
+                    <td id="arma1Critico"></td>
+                    <td id="arma1Gitt"></td>
+                    <td id="arma1Tipo"></td>
+                    <td id="arma1Uso"></td>
+                    <td id="arma1Sp"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <a></a>
+                    </td>
+                    <td id="arma2Liv"></td>
+                    <td id="arma2Danno"></td>
+                    <td id="arma2Critico"></td>
+                    <td id="arma2Gitt"></td>
+                    <td id="arma2Tipo"></td>
+                    <td id="arma2Uso"></td>
+                    <td id="arma2Sp"></td>
+                </tr> -->
+            </table>
+        </div>
+
+        <div>
+            <h3>Privilegi e tratti</h3>
+            <table>
+                <!-- <tr>
+                    <td>
+                       <a id="capacita1"></a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                       <a id="capacita2"></a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                       <a id="capacita3"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                       <a id="capacita4"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                       <a id="capacita5"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                       <a id="capacita6"></a>
+                    </td>
+                </tr> -->
+            </table>
+        </div>
+
+        <div>
+            <h3>Linguaggi</h3>
+            <table>
+                <tr>
+                    <td id="lingua1"></td>
+                </tr>
+                <tr>
+                    <td id="lingua2"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <h3>Equipaggiamento</h3>
+            <table>
+                <!-- <tr>
+                    <td id="equip1"></td>
+                </tr> -->
+            </table>
+            <h4>Crediti</h4>
+            <table>
+                <tr>
+                    <td id="crediti"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <h3>Punti esperienza</h3>
+            <table>
+                <tr>
+                    <th>exp</th>
+                    <td id="xp"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <h3>Abilità</h3>
+            <table>
+                <tr>
+                    <th>ACROBAZIA</th>
+                    <td id="acrobazia"></td>
+                </tr>
+                <tr>
+                    <th>ADDESTRARE ANIMALI</th>
+                    <td id="addestrareAnimali"></td>
+                </tr>
+                <tr>
+                    <th>ARCANO</th>
+                    <td id="arcano"></td>
+                </tr>
+                <tr>
+                    <th>ATLETICA</th>
+                    <td id="atletica"></td>
+                </tr>
+                <tr>
+                    <th>FURTIVITÀ</th>
+                    <td id="furtivita"></td>
+                </tr>
+                <tr>
+                    <th>INDAGARE</th>
+                    <td id="indagare"></td>
+                </tr>
+                <tr>
+                    <th>INGANNO</th>
+                    <td id="inganno"></td>
+                </tr>
+                <tr>
+                    <th>ITIMIDIRE</th>
+                    <td id="intimidire"></td>
+                </tr>
+                <tr>
+                    <th>INTRATTENERE</th>
+                    <td id="intrattenere"></td>
+                </tr>
+                <tr>
+                    <th>INTUIZIONE</th>
+                    <td id="intuizione"></td>
+                </tr>
+                <tr>
+                    <th>MEDICINA</th>
+                    <td id="medicina"></td>
+                </tr>
+                <tr>
+                    <th>NATURA</th>
+                    <td id="natura"></td>
+                </tr>
+                <tr>
+                    <th>PERCEZIONE</th>
+                    <td id="percezione"></td>
+                </tr>
+                <tr>
+                    <th>PERSUASIONE</th>
+                    <td id="persuasione"></td>
+                </tr>
+                <tr>
+                    <th>RAPIDITÀ DI MANO</th>
+                    <td id="rapiditaDiMano"></td>
+                </tr>
+                <tr>
+                    <th>RELIGIONE</th>
+                    <td id="religione"></td>
+                </tr>
+                <tr>
+                    <th>SOPRAVVIVENZA</th>
+                    <td id="sopravvivenza"></td>
+                </tr>
+                <tr>
+                    <th>STORIA</th>
+                    <td id="storia"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <h3>Incantesimi</h3>
+            <h4>Trucchetti</h4>
+            <table>
+                <tr>
+                    <th>incantesimo</th>
+                    <th>tempo</th>
+                    <th>durata</th>
+                    <th>gittata</th>
+                    <th>danno</th>
+                </tr>
+                <tr>
+                    <td>
+                        <a id="incantesimo01"></a>
+                    </td>
+                    <td id="inc01Tempo"></td>
+                    <td id="inc01Durata"></td>
+                    <td id="inc01Gitt"></td>
+                    <td id="inc01Danno"></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <script src="src/Isidora.js"></script>
+</body>
+</html>
