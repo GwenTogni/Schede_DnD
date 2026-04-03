@@ -218,3 +218,142 @@ var xpLivello = 0;
 
 document.getElementById("xp").innerHTML = xp;
 document.getElementById("xpLivello").innerHTML = xpLivello;
+
+// Incantesimi
+// Livello 0
+var incantesimo01 = ["frastornare", 1+" AZ", 1+" round", 12+" m", 0]
+var incantesimo02 = ["individuazione del magico", 1+" min", 1+" round", 18+" m", 0]
+var incantesimo03 = ["mano psicocinetica", 1+" AZ", 1+" round", 12+" m", 0]
+var incantesimo04 = ["messaggio telepatico", 1+" AZ", 10+" min", 30 + 3*livello +" m", 1+"d"+4]
+var incantesimo05 = ["riparare", 10+" min", "istantaneo", 3+" m", 0]
+var incantesimo06 = ["raggio di energia", 1+" AZ", "istantaneo", 12+" m", 0]
+
+// Livello 1
+var incantesimo11 = ["camuffare se stesso", 1+" AZ", 10+" min", 0, 0]
+var incantesimo12 = ["controllo a distanza", 1+" AZ", 1+" round", 18+" m", 0]
+var incantesimo13 = ["conoscere le coordinate", 1+" AZ", "istantaneo", "-", 0]
+var incantesimo14 = ["ondata elettrica", 1+" AZ", "istantaneo", "creatura", 4+"d"+6]
+var incantesimo15 = ["identificare", 1+" AZ", 1+" round", 1.5+" m", 0]
+
+// Livello 2
+var incantesimo21 = ["frastornare", 1+" AZ", 1+" round", 12+" m", 0]
+var incantesimo22 = ["frastornare", 1+" AZ", 1+" round", 12+" m", 0]
+var incantesimo23 = ["frastornare", 1+" AZ", 1+" round", 12+" m", 0]
+var incantesimo24 = ["frastornare", 1+" AZ", 1+" round", 12+" m", 0]
+
+// Livello 3
+var incantesimo31 = ["frastornare", 1+" AZ", 1+" round", 12+" m", 0]
+var incantesimo32 = ["frastornare", 1+" AZ", 1+" round", 12+" m", 0]
+var incantesimo33 = ["frastornare", 1+" AZ", 1+" round", 12+" m", 0]
+
+// Livello 0
+document.getElementById("incantesimo01").innerHTML = incantesimo01[0];
+document.getElementById("inc01Tempo").innerHTML = incantesimo01[1];
+document.getElementById("inc01Durata").innerHTML = incantesimo01[2];
+document.getElementById("inc01Gitt").innerHTML = incantesimo01[3];
+document.getElementById("inc01Danno").innerHTML = incantesimo01[4];
+
+document.getElementById("incantesimo02").innerHTML = incantesimo02[0];
+document.getElementById("inc02Tempo").innerHTML = incantesimo02[1];
+document.getElementById("inc02Durata").innerHTML = incantesimo02[2];
+document.getElementById("inc02Gitt").innerHTML = incantesimo02[3];
+document.getElementById("inc02Danno").innerHTML = incantesimo02[4];
+
+document.getElementById("incantesimo03").innerHTML = incantesimo03[0];
+document.getElementById("inc03Tempo").innerHTML = incantesimo03[1];
+document.getElementById("inc03Durata").innerHTML = incantesimo03[2];
+document.getElementById("inc03Gitt").innerHTML = incantesimo03[3];
+document.getElementById("inc03Danno").innerHTML = incantesimo03[4];
+
+document.getElementById("incantesimo04").innerHTML = incantesimo04[0];
+document.getElementById("inc04Tempo").innerHTML = incantesimo04[1];
+document.getElementById("inc04Durata").innerHTML = incantesimo04[2];
+document.getElementById("inc04Gitt").innerHTML = incantesimo04[3];
+document.getElementById("inc04Danno").innerHTML = incantesimo04[4];
+
+document.getElementById("incantesimo05").innerHTML = incantesimo05[0];
+document.getElementById("inc05Tempo").innerHTML = incantesimo05[1];
+document.getElementById("inc05Durata").innerHTML = incantesimo05[2];
+document.getElementById("inc05Gitt").innerHTML = incantesimo05[3];
+document.getElementById("inc05Danno").innerHTML = incantesimo05[4];
+
+document.getElementById("incantesimo06").innerHTML = incantesimo06[0];
+document.getElementById("inc06Tempo").innerHTML = incantesimo06[1];
+document.getElementById("inc06Durata").innerHTML = incantesimo06[2];
+document.getElementById("inc06Gitt").innerHTML = incantesimo06[3];
+document.getElementById("inc06Danno").innerHTML = incantesimo06[4];
+
+// Livello 1
+document.getElementById("incantesimo11").innerHTML = incantesimo11[0];
+document.getElementById("inc11Tempo").innerHTML = incantesimo11[1];
+document.getElementById("inc11Durata").innerHTML = incantesimo11[2];
+document.getElementById("inc11Gitt").innerHTML = incantesimo11[3];
+document.getElementById("inc11Danno").innerHTML = incantesimo11[4];
+
+document.getElementById("incantesimo12").innerHTML = incantesimo12[0];
+document.getElementById("inc12Tempo").innerHTML = incantesimo12[1];
+document.getElementById("inc12Durata").innerHTML = incantesimo12[2];
+document.getElementById("inc12Gitt").innerHTML = incantesimo12[3];
+document.getElementById("inc12Danno").innerHTML = incantesimo12[4];
+
+document.getElementById("incantesimo13").innerHTML = incantesimo13[0];
+document.getElementById("inc13Tempo").innerHTML = incantesimo13[1];
+document.getElementById("inc13Durata").innerHTML = incantesimo13[2];
+document.getElementById("inc13Gitt").innerHTML = incantesimo13[3];
+document.getElementById("inc13Danno").innerHTML = incantesimo13[4];
+
+document.getElementById("incantesimo14").innerHTML = incantesimo14[0];
+document.getElementById("inc14Tempo").innerHTML = incantesimo14[1];
+document.getElementById("inc14Durata").innerHTML = incantesimo14[2];
+document.getElementById("inc14Gitt").innerHTML = incantesimo14[3];
+document.getElementById("inc14Danno").innerHTML = incantesimo14[4];
+
+document.getElementById("incantesimo15").innerHTML = incantesimo15[0];
+document.getElementById("inc15Tempo").innerHTML = incantesimo15[1];
+document.getElementById("inc15Durata").innerHTML = incantesimo15[2];
+document.getElementById("inc15Gitt").innerHTML = incantesimo15[3];
+document.getElementById("inc15Danno").innerHTML = incantesimo15[4];
+
+// Livello 2
+document.getElementById("incantesimo21").innerHTML = incantesimo21[0];
+document.getElementById("inc21Tempo").innerHTML = incantesimo21[1];
+document.getElementById("inc21Durata").innerHTML = incantesimo21[2];
+document.getElementById("inc21Gitt").innerHTML = incantesimo21[3];
+document.getElementById("inc21Danno").innerHTML = incantesimo21[4];
+
+document.getElementById("incantesimo22").innerHTML = incantesimo22[0];
+document.getElementById("inc22Tempo").innerHTML = incantesimo22[1];
+document.getElementById("inc22Durata").innerHTML = incantesimo22[2];
+document.getElementById("inc22Gitt").innerHTML = incantesimo22[3];
+document.getElementById("inc22Danno").innerHTML = incantesimo22[4];
+
+document.getElementById("incantesimo23").innerHTML = incantesimo23[0];
+document.getElementById("inc23Tempo").innerHTML = incantesimo23[1];
+document.getElementById("inc23Durata").innerHTML = incantesimo23[2];
+document.getElementById("inc23Gitt").innerHTML = incantesimo23[3];
+document.getElementById("inc23Danno").innerHTML = incantesimo23[4];
+
+document.getElementById("incantesimo24").innerHTML = incantesimo24[0];
+document.getElementById("inc24Tempo").innerHTML = incantesimo24[1];
+document.getElementById("inc24Durata").innerHTML = incantesimo24[2];
+document.getElementById("inc24Gitt").innerHTML = incantesimo24[3];
+document.getElementById("inc24Danno").innerHTML = incantesimo24[4];
+
+// Livello 3
+document.getElementById("incantesimo31").innerHTML = incantesimo31[0];
+document.getElementById("inc31Tempo").innerHTML = incantesimo31[1];
+document.getElementById("inc31Durata").innerHTML = incantesimo31[2];
+document.getElementById("inc31Gitt").innerHTML = incantesimo31[3];
+document.getElementById("inc31Danno").innerHTML = incantesimo31[4];
+
+document.getElementById("incantesimo32").innerHTML = incantesimo32[0];
+document.getElementById("inc32Tempo").innerHTML = incantesimo32[1];
+document.getElementById("inc32Durata").innerHTML = incantesimo32[2];
+document.getElementById("inc32Gitt").innerHTML = incantesimo32[3];
+document.getElementById("inc32Danno").innerHTML = incantesimo32[4];
+
+document.getElementById("incantesimo33").innerHTML = incantesimo33[0];
+document.getElementById("inc33Tempo").innerHTML = incantesimo33[1];
+document.getElementById("inc33Durata").innerHTML = incantesimo33[2];
+document.getElementById("inc33Gitt").innerHTML = incantesimo33[3];
+document.getElementById("inc33Danno").innerHTML = incantesimo33[4];
