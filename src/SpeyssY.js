@@ -256,23 +256,26 @@ if (somma == gradiAbiilitaTot) {
 }
 
 // Armi
-document.getElementById("arma1").innerHTML = "pistola ad aghi tattica";
-document.getElementById("arma1Liv").innerHTML = 1;
-document.getElementById("arma1Danno").innerHTML = "1d4";
-document.getElementById("arma1Critico").innerHTML = "iniezione CD + 2";
-document.getElementById("arma1Gitt").innerHTML = 12;
-document.getElementById("arma1Tipo").innerHTML = "piccola, a mano";
-document.getElementById("arma1Uso").innerHTML = "8 dardi / 1";
-document.getElementById("arma1Sp").innerHTML = "analogica, iniezione";
+var arma1 = ["pistola ad aghi tattica", 1, 1+" d"+4, "iniezione CD +"+2, 12, "piccola, a mano", 8+" dardi / "+1, "analogica, iniezione"];
+var arma2 = ["shuriken con scanalature", 1, 1+" d"+8, "sanguinamento + "+1+" d"+4, 6, "speciale, una mano", "-", "lancio, ricarica rapida"];
 
-document.getElementById("arma2").innerHTML = "shuriken con scanalature";
-document.getElementById("arma2Liv").innerHTML = 1;
-document.getElementById("arma2Danno").innerHTML = "1d8";
-document.getElementById("arma2Critico").innerHTML = "sanguinamento 1d4";
-document.getElementById("arma2Gitt").innerHTML = 6;
-document.getElementById("arma2Tipo").innerHTML = "speciale, una mano";
-document.getElementById("arma2Uso").innerHTML = "-";
-document.getElementById("arma2Sp").innerHTML = "lancio, ricarica rapida";
+document.getElementById("arma1").innerHTML = arma1[0];
+document.getElementById("arma1Liv").innerHTML = arma1[1];
+document.getElementById("arma1Danno").innerHTML = arma1[2];
+document.getElementById("arma1Critico").innerHTML = arma1[3];
+document.getElementById("arma1Gitt").innerHTML = arma1[4];
+document.getElementById("arma1Tipo").innerHTML = arma1[5];
+document.getElementById("arma1Uso").innerHTML = arma1[6];
+document.getElementById("arma1Sp").innerHTML = arma1[7];
+
+document.getElementById("arma2").innerHTML = arma2[0];
+document.getElementById("arma2Liv").innerHTML = arma2[1];
+document.getElementById("arma2Danno").innerHTML = arma2[2];
+document.getElementById("arma2Critico").innerHTML = arma2[3];
+document.getElementById("arma2Gitt").innerHTML = arma2[4];
+document.getElementById("arma2Tipo").innerHTML = arma2[5];
+document.getElementById("arma2Uso").innerHTML = arma2[6];
+document.getElementById("arma2Sp").innerHTML = arma2[7];
 
 // Capacità
 document.getElementById("capacita1").innerHTML = "visione crepuscolare";
