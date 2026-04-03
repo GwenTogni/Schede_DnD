@@ -1,47 +1,47 @@
 // Personaggio
-var nome = "Nyx"
-var classe = "-";
-var background = "nobile";
-var razza = "umana";
-var livello = 1;
-var taglia = "media";
-var velocita = 9;
-var allineamento = "CB";
+var nome = "Nyx Lorilla Dublelock Murnig"
+var classe = "Ladro Mistificatore Arcano";
+var background = "investigatore";
+var razza = "gnomo delle montagne";
+var livello = 9;
+var taglia = "piccola";
+var velocita = 10.5;
+var allineamento = "LN";
 
 document.getElementById("nome").innerHTML = nome;
 document.getElementById("classe").innerHTML = classe;
 document.getElementById("razza").innerHTML = razza;
 document.getElementById("livello").innerHTML = livello;
 document.getElementById("taglia").innerHTML = taglia;
-document.getElementById("velocita").innerHTML = velocita + "m";
+document.getElementById("velocita").innerHTML = velocita + " m";
 document.getElementById("allineamento").innerHTML = allineamento;
 
 // Punteggi caratteristica
 var budget = 27;
 
-if (livello == 5) {
+if (livello >= 5) {
     budget += 4;
-} else if (livello == 10) {
+} else if (livello >= 10) {
     budget += 8;
-} else if (livello == 15) {
+} else if (livello >= 15) {
     budget += 12;
-} else if (livello == 20) {
+} else if (livello >= 20) {
     budget += 16;
 }
 
-var forza = 13;
-var destrezza = 13;
-var costituzione = 13;
-var intelligenza = 15;
-var saggezza = 9;
-var carisma = 10;
+var forza = 8;
+var destrezza = 18;
+var costituzione = 10;
+var intelligenza = 18;
+var saggezza = 12;
+var carisma = 13;
 
-let forMigliorata = forza + 1;
-let desMigliorata = destrezza + 1;
-let cosMigliorata = costituzione + 1;
-let intMigliorata = intelligenza + 1;
-let sagMigliorata = saggezza + 1;
-let carMigliorata = carisma + 1;
+let forMigliorata = forza;
+let desMigliorata = destrezza;
+let cosMigliorata = costituzione;
+let intMigliorata = intelligenza;
+let sagMigliorata = saggezza;
+let carMigliorata = carisma;
 
 var punteggio = [forza, destrezza, costituzione, intelligenza, saggezza, carisma];
 let modificatore = [forza, destrezza, costituzione, intelligenza, saggezza, carisma];
@@ -129,8 +129,7 @@ document.getElementById("tsCar").innerHTML = tsCar;
 // Abilità
 var abilita = [acrobazia, addestrareAnimali, arcano, atletica, furtivita, indagare, inganno, intimidire, intrattenere, intuizione, medicina, natura, percezione, persuasione, rapiditaDiMano, religione, sopravvivenza, storia];
 const MOD = [1,4,3,0,1,3,5,5,5,4,4,3,4,5,1,3,4,3];
-var bonus = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-let somma = 0;
+var bonus = [3,0,0,0,3,3,3,0,0,3,0,0,3,0,0,0,0,0];
 
 for (var i=0; i<abilita.length; i++) {
     abilita[i] = bonus[i] + modMigliorato[MOD[i]];
@@ -155,21 +154,50 @@ document.getElementById("religione").innerHTML = abilita[15];
 document.getElementById("sopravvivenza").innerHTML = abilita[16];
 document.getElementById("storia").innerHTML = abilita[17];
 
+// Armi
+var arma1 = ["mazza", 7, 3, 1+" d"+8, "contatto", "perf.", 1, "-"]
+
+document.getElementById("arma1").innerHTML = arma1[0];
+document.getElementById("arma1Tc").innerHTML = arma1[1];
+document.getElementById("arma1BDanno").innerHTML = arma1[2];
+document.getElementById("arma1Danno").innerHTML = arma1[3];
+document.getElementById("arma1Gitt").innerHTML = arma1[4];
+document.getElementById("arma1Tipo").innerHTML = arma1[5];
+document.getElementById("arma1Quant").innerHTML = arma1[6];
+document.getElementById("arma1Muniz").innerHTML = arma1[7];
+
 // Privilegi e tratti
-document.getElementById("capacita1").innerHTML = "...";
+var capacita = ["astuzia gnomesca", "lottatore", "maestria", "attacco furtivo", "gergo ladresco", "occhio dell'osservatore", "tiratore scelto", "azione scaltra", "schivata prodigiosa", "elusione", "talento mobilità", "dote affidabile"]
+
+document.getElementById("capacita1").innerHTML = capacita[0];
+document.getElementById("capacita2").innerHTML = capacita[1];
+document.getElementById("capacita3").innerHTML = capacita[2];
+document.getElementById("capacita4").innerHTML = capacita[3];
+document.getElementById("capacita5").innerHTML = capacita[4];
+document.getElementById("capacita6").innerHTML = capacita[5];
+document.getElementById("capacita7").innerHTML = capacita[6];
+document.getElementById("capacita8").innerHTML = capacita[7];
+document.getElementById("capacita9").innerHTML = capacita[8];
+document.getElementById("capacita10").innerHTML = capacita[9];
+document.getElementById("capacita11").innerHTML = capacita[10];
+document.getElementById("capacita12").innerHTML = capacita[11];
 
 // Linguaggi
-var lingua = ["comune", "draconico"]
+var lingua = ["comune", "gnomesco", "sottocomune", "goblin"]
 
 document.getElementById("lingua1").innerHTML = lingua[0];
 document.getElementById("lingua2").innerHTML = lingua[1];
+document.getElementById("lingua3").innerHTML = lingua[2];
+document.getElementById("lingua4").innerHTML = lingua[3];
 
 // Equipaggiamento
 document.getElementById("equip1").innerHTML = "...";
 
 // Crediti
-var crediti = 0;
-document.getElementById("crediti").innerHTML = crediti;
+var mr = 29;
+var mo = 557;
+document.getElementById("mr").innerHTML = mo+" MR";
+document.getElementById("mo").innerHTML = mo+" MO";
 
 // Punti esperienza
 var xp = 0;

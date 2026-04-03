@@ -13,19 +13,19 @@ document.getElementById("classe").innerHTML = classe;
 document.getElementById("razza").innerHTML = razza;
 document.getElementById("livello").innerHTML = livello;
 document.getElementById("taglia").innerHTML = taglia;
-document.getElementById("velocita").innerHTML = velocita + "m";
+document.getElementById("velocita").innerHTML = velocita + " m";
 document.getElementById("allineamento").innerHTML = allineamento;
 
 // Punteggi caratteristica
 var budget = 27;
 
-if (livello == 5) {
+if (livello >= 5) {
     budget += 4;
-} else if (livello == 10) {
+} else if (livello >= 10) {
     budget += 8;
-} else if (livello == 15) {
+} else if (livello >= 15) {
     budget += 12;
-} else if (livello == 20) {
+} else if (livello >= 20) {
     budget += 16;
 }
 
@@ -130,7 +130,6 @@ document.getElementById("tsCar").innerHTML = tsCar;
 var abilita = [acrobazia, addestrareAnimali, arcano, atletica, furtivita, indagare, inganno, intimidire, intrattenere, intuizione, medicina, natura, percezione, persuasione, rapiditaDiMano, religione, sopravvivenza, storia];
 const MOD = [1,4,3,0,1,3,5,5,5,4,4,3,4,5,1,3,4,3];
 var bonus = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-let somma = 0;
 
 for (var i=0; i<abilita.length; i++) {
     abilita[i] = bonus[i] + modMigliorato[MOD[i]];

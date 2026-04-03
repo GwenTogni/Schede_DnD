@@ -12,7 +12,7 @@ document.getElementById("classe").innerHTML = classe;
 document.getElementById("razza").innerHTML = razza;
 document.getElementById("livello").innerHTML = livello;
 document.getElementById("taglia").innerHTML = taglia;
-document.getElementById("velocita").innerHTML = velocita + "m";
+document.getElementById("velocita").innerHTML = velocita + " m";
 document.getElementById("allineamento").innerHTML = allineamento;
 
 // Punteggi classe
