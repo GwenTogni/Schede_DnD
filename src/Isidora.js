@@ -154,6 +154,7 @@ document.getElementById("sopravvivenza").innerHTML = abilita[16];
 document.getElementById("storia").innerHTML = abilita[17];
 
 // Privilegi e tratti
+document.getElementById("capacita1").innerHTML = "...";
 
 // Linguaggi
 var lingua = ["comune", "draconico"]
@@ -162,6 +163,7 @@ document.getElementById("lingua1").innerHTML = lingua[0];
 document.getElementById("lingua2").innerHTML = lingua[1];
 
 // Equipaggiamento
+document.getElementById("equip1").innerHTML = "...";
 
 // Crediti
 var crediti = 0;
@@ -182,7 +184,7 @@ var contaIncantesimi5 = 0;
 var contaIncantesimi6 = 0;
 
 // Livello 0
-var incantesimo01 = ["frastornare", 1+" AZ", 1+" round", 12+" m", 0]; contaIncantesimi0++;
+var incantesimo01 = ["...", 0+" AZ", 0+" round", 0+" m", 0]; contaIncantesimi0++;
 
 // Livello 0
 document.getElementById("incantesimo01").innerHTML = incantesimo01[0];
