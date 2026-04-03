@@ -14,6 +14,14 @@ document.getElementById("velocita").innerHTML = velocita + "m";
 document.getElementById("allineamento").innerHTML = allineamento;
 
 // Punteggi classe
+var slot0 = 6;
+var slot1 = 2;
+var slot2 = 0;
+var slot3 = 0;
+var slot4 = 0;
+var slot5 = 0;
+var slot6 = 0;
+
 var bab = 0;
 var modTempra = 0;
 var modRiflessi = 0;
@@ -30,52 +38,76 @@ for (var i=0; i<livello; i++) {
         bab++;
         modTempra++;
         modRiflessi++;
+        slot1++;
     }else if (i == 4) {
         bab++;
-        modVolonta++;
+        modVolonta+=2;
+        slot2++;
+    } else if (i == 5) {
+        slot1++;
     } else if (i == 6) {
         bab++;
         modTempra++;
         modRiflessi++;
         modVolonta++;
+        slot2++;
     } else if (i == 7) {
         bab++;
+        slot3+=2;
     } else if (i == 8) {
         bab++;
         modVolonta++;
+        slot2++;
     } else if (i == 9) {
         modTempra++;
         modRiflessi++;
+        slot3++;
     } else if (i == 10) {
         bab++;
         modVolonta++;
+        slot4+=2;
     } else if (i == 11) {
         bab++;
+        slot3++;
     } else if (i == 12) {
         bab++;
         modTempra++;
         modRiflessi++;
         modVolonta++;
+    } else if (i == 13) {
+        slot5+=2;
     } else if (i == 14) {
         bab++;
         modVolonta++;
+        slot2++;
+        slot4++;
     } else if (i == 15) {
         bab++;
         modTempra++;
         modRiflessi++;
+        slot3++;
+        slot5++;
     } else if (i == 16) {
         bab++;
         modVolonta++;
+        slot6+=2;
+    } else if (i == 17) {
+        slot5++;
     } else if (i == 18) {
         bab++;
         modTempra++;
         modRiflessi++;
         modVolonta++
+        slot4++;
+        slot6++;
     } else if (i == 19) {
         bab++;
+        slot5++;
+        slot6++;
     } else if (i == 20) {
         bab++;
         modVolonta++;
+        slot6++;
     }
 }
 
@@ -318,6 +350,11 @@ document.getElementById("xp").innerHTML = xp;
 document.getElementById("xpLivello").innerHTML = xpLivello;
 
 // Incantesimi
+document.getElementById("slot0").innerHTML = slot0;
+document.getElementById("slot1").innerHTML = slot1;
+document.getElementById("slot2").innerHTML = slot2;
+document.getElementById("slot3").innerHTML = slot3;
+
 // Livello 0
 var incantesimo01 = ["frastornare", 1+" AZ", 1+" round", 12+" m", 0]
 var incantesimo02 = ["individuazione del magico", 1+" min", 1+" round", 18+" m", 0]
