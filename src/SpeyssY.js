@@ -14,14 +14,13 @@ document.getElementById("velocita").innerHTML = velocita + "m";
 document.getElementById("allineamento").innerHTML = allineamento;
 
 // Punteggi classe
-// const BONUS_STAMINA = 5 + modMigliorato[2];
-// const BONUS_FERITA = 5;
-// const GRADI_ABILITA = 4 + modMigliorato[3];
-
 var bab = 0;
 var modTempra = 0;
 var modRiflessi = 0;
 var modVolonta = 2;
+
+var bonusEnergia = 0;
+var bonusCinetica = 1;
 
 for (var i=0; i<livello; i++) {
     if (i == 2) {
@@ -124,6 +123,10 @@ if (budget == 0) {
     document.getElementById("controlloPunteggi").innerHTML = "Budget "+budget;
 }
 
+var bonusStamina = 5 + modMigliorato[2];
+var bonusFerita = 5;
+var gradiAbilita = 4 + modMigliorato[3];
+
 document.getElementById("pFor").innerHTML = pMigliorato[0];
 document.getElementById("modFor").innerHTML = modMigliorato[0];
 document.getElementById("pDes").innerHTML = pMigliorato[1];
@@ -151,9 +154,9 @@ document.getElementById("iniziativa").innerHTML = iniziativa;
 // Salute e risolutezza
 var danni = 0;
 
-let ferita = 5 * livello;
+let ferita = bonusFerita * livello;
 let risolutezza = Math.trunc(livello / 2 + modMigliorato[3]);
-let stamina = (5 + modMigliorato[2]) * livello;
+let stamina = bonusStamina * livello;
 
 let risolutezzaAttuali = risolutezza;
 let feritaAttuali = ferita;
@@ -174,9 +177,6 @@ document.getElementById("pFeritaAttuali").innerHTML = feritaAttuali;
 document.getElementById("pRisolutezzaAttuali").innerHTML = risolutezzaAttuali;
 
 // Classe armatura
-var bonusEnergia = 0;
-var bonusCinetica = 1;
-
 let cae = 10 + bonusEnergia + modMigliorato[1];
 let cac = 10 + bonusCinetica + modMigliorato[1];
 let ca = 8 + cac;
@@ -319,7 +319,7 @@ document.getElementById("xpLivello").innerHTML = xpLivello;
 var incantesimo01 = ["frastornare", 1+" AZ", 1+" round", 12+" m", 0]
 var incantesimo02 = ["individuazione del magico", 1+" min", 1+" round", 18+" m", 0]
 var incantesimo03 = ["mano psicocinetica", 1+" AZ", 1+" round", 12+" m", 0]
-var incantesimo04 = ["messaggio telepatico", 1+" AZ", 10+" min", 30 + 3*livello +" m", 1+"d"+4]
+var incantesimo04 = ["messaggio telepatico", 1+" AZ", 10+" min", 30 + 3*livello +" m", 1+" d"+4]
 var incantesimo05 = ["riparare", 10+" min", "istantaneo", 3+" m", 0]
 var incantesimo06 = ["raggio di energia", 1+" AZ", "istantaneo", 12+" m", 0]
 
@@ -327,18 +327,18 @@ var incantesimo06 = ["raggio di energia", 1+" AZ", "istantaneo", 12+" m", 0]
 var incantesimo11 = ["camuffare se stesso", 1+" AZ", 10+" min", 0, 0]
 var incantesimo12 = ["controllo a distanza", 1+" AZ", 1+" round", 18+" m", 0]
 var incantesimo13 = ["conoscere le coordinate", 1+" AZ", "istantaneo", "-", 0]
-var incantesimo14 = ["ondata elettrica", 1+" AZ", "istantaneo", "creatura", 4+"d"+6]
+var incantesimo14 = ["ondata elettrica", 1+" AZ", "istantaneo", "creatura", 4+" d"+6]
 var incantesimo15 = ["identificare", 1+" AZ", 1+" round", 1.5+" m", 0]
 
 // Livello 2
-var incantesimo21 = ["bomba logica", 1+" AZ", 1*livello+" round", "contatto", 6+"d"+6]
-var incantesimo22 = ["invisibilità", 1+" AZ", 1+" min", "-", 0]
+var incantesimo21 = ["bomba logica", 1+" AZ", 1*livello+" round", "contatto", 6+" d"+6]
+var incantesimo22 = ["invisibilità", 1+" AZ", 1+" min", "contatto", 0]
 var incantesimo23 = ["sigillo di sicurezza", 1+" AZ", 24+" h", 9+" m2", 0]
-var incantesimo24 = ["rete laser", 1+" AZ", 1*livello+" min", 30 + 3*livello+" m", 1+"d"+6+" + "+1]
+var incantesimo24 = ["rete laser", 1+" AZ", 1*livello+" min", 30 + 3*livello+" m", 1+" d"+6+" + "+1]
 
 // Livello 3
 var incantesimo31 = ["orientarsi nella navigazione", 1+" round", 1*livello+" h", 7.5 + 1.5 * Math.trunc(livello/2) +" m", "+ "+10+" pilotare"]
-var incantesimo32 = ["distorsione", 1+" AZ", 1*livello+" round", "contatto", "+ "+50+"% probabilità di schivare"]
+var incantesimo32 = ["distorsione", 1+" AZ", 1*livello+" round", "contatto", "+ "+50+"% elusione"]
 var incantesimo33 = ["ondata ad arco", 1+" AZ", "istantaneo", 36+" m", 10+" d"+6]
 
 // Livello 0
