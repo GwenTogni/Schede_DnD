@@ -156,6 +156,9 @@ document.getElementById("storia").innerHTML = abilita[17];
 
 // Armi
 var arma1 = ["mazza", 7, 3, 1+" d"+8, "contatto", "perf.", 1, "-"]
+var arma2 = ["stocco", 7, 3, 1+" d"+8, "contatto", "perf.", 1, "-"]
+var arma3 = ["arco corto", 7, 3, 1+" d"+6, 96+" m", "perf.", 1, 20]
+var arma4 = ["pugnale", 7, 3, 1+" d"+4, 18+" m", "perf.", 2, "-"]
 
 document.getElementById("arma1").innerHTML = arma1[0];
 document.getElementById("arma1Tc").innerHTML = arma1[1];
@@ -165,6 +168,33 @@ document.getElementById("arma1Gitt").innerHTML = arma1[4];
 document.getElementById("arma1Tipo").innerHTML = arma1[5];
 document.getElementById("arma1Quant").innerHTML = arma1[6];
 document.getElementById("arma1Muniz").innerHTML = arma1[7];
+
+document.getElementById("arma2").innerHTML = arma2[0];
+document.getElementById("arma2Tc").innerHTML = arma2[1];
+document.getElementById("arma2BDanno").innerHTML = arma2[2];
+document.getElementById("arma2Danno").innerHTML = arma2[3];
+document.getElementById("arma2Gitt").innerHTML = arma2[4];
+document.getElementById("arma2Tipo").innerHTML = arma2[5];
+document.getElementById("arma2Quant").innerHTML = arma2[6];
+document.getElementById("arma2Muniz").innerHTML = arma2[7];
+
+document.getElementById("arma3").innerHTML = arma3[0];
+document.getElementById("arma3Tc").innerHTML = arma3[1];
+document.getElementById("arma3BDanno").innerHTML = arma3[2];
+document.getElementById("arma3Danno").innerHTML = arma3[3];
+document.getElementById("arma3Gitt").innerHTML = arma3[4];
+document.getElementById("arma3Tipo").innerHTML = arma3[5];
+document.getElementById("arma3Quant").innerHTML = arma3[6];
+document.getElementById("arma3Muniz").innerHTML = arma3[7];
+
+document.getElementById("arma4").innerHTML = arma4[0];
+document.getElementById("arma4Tc").innerHTML = arma4[1];
+document.getElementById("arma4BDanno").innerHTML = arma4[2];
+document.getElementById("arma4Danno").innerHTML = arma4[3];
+document.getElementById("arma4Gitt").innerHTML = arma4[4];
+document.getElementById("arma4Tipo").innerHTML = arma4[5];
+document.getElementById("arma4Quant").innerHTML = arma4[6];
+document.getElementById("arma4Muniz").innerHTML = arma4[7];
 
 // Privilegi e tratti
 var capacita = ["astuzia gnomesca", "lottatore", "maestria", "attacco furtivo", "gergo ladresco", "occhio dell'osservatore", "tiratore scelto", "azione scaltra", "schivata prodigiosa", "elusione", "talento mobilità", "dote affidabile"]
