@@ -1,0 +1,160 @@
+// Personaggio
+var classe = "tecnomante";
+var razza = "androide";
+var livello = 9;
+var taglia = "media";
+var velocita = 9;
+var allineamento = "N";
+
+document.getElementById("classe").innerHTML = classe;
+document.getElementById("razza").innerHTML = razza;
+document.getElementById("livello").innerHTML = livello;
+document.getElementById("taglia").innerHTML = taglia;
+document.getElementById("velocita").innerHTML = velocita + "m";
+document.getElementById("allineamento").innerHTML = allineamento;
+
+// Punteggi caratteristica
+var forza = 14;
+var destrezza = 17;
+var costituzione = 14;
+var intelligenza = 14;
+var saggezza = 7;
+var carisma = 7;
+
+let forMigliorata = forza;
+let desMigliorata = destrezza;
+let cosMigliorata = costituzione;
+let intMigliorata = intelligenza + 2;
+let sagMigliorata = saggezza;
+let carMigliorata = carisma;
+
+var punteggio = [forza, destrezza, costituzione, intelligenza, saggezza, carisma];
+let modificatore = [forza, destrezza, costituzione, intelligenza, saggezza, carisma];
+var pMigliorato = [forMigliorata, desMigliorata, cosMigliorata, intMigliorata, sagMigliorata, carMigliorata];
+let modMigliorato = [forMigliorata, desMigliorata, cosMigliorata, intMigliorata, sagMigliorata, carMigliorata];
+
+for (var i=0; i< punteggio.length; i++) {
+    modificatore[i] = Math.trunc((punteggio[i] - 10) / 2);
+}
+for (var i=0; i< pMigliorato.length; i++) {
+    modMigliorato[i] = Math.trunc((pMigliorato[i] - 10) / 2);
+}
+
+document.getElementById("pFor").innerHTML = pMigliorato[0];
+document.getElementById("modFor").innerHTML = modMigliorato[0];
+document.getElementById("pDes").innerHTML = pMigliorato[1];
+document.getElementById("modDes").innerHTML = modMigliorato[1];
+document.getElementById("pCos").innerHTML = pMigliorato[2];
+document.getElementById("modCos").innerHTML = modMigliorato[2];
+document.getElementById("pInt").innerHTML = pMigliorato[3];
+document.getElementById("modInt").innerHTML = modMigliorato[3];
+document.getElementById("pSag").innerHTML = pMigliorato[4];
+document.getElementById("modSag").innerHTML = modMigliorato[4];
+document.getElementById("pCar").innerHTML = pMigliorato[5];
+document.getElementById("modCar").innerHTML = modMigliorato[5];
+
+// Iniziativa
+var modVariIniz = 11;
+var d20 = Math.round(Math.random() * 20);
+
+let totBonusIniz = modVariIniz + modMigliorato[1];
+let iniziativa = totBonusIniz + d20;
+
+document.getElementById("totBonusIniz").innerHTML = totBonusIniz;
+document.getElementById("d20").innerHTML = d20;
+document.getElementById("iniziativa").innerHTML = iniziativa;
+
+// Salute e risolutezza
+var danni = 0;
+
+let stamina = (5 + modMigliorato[2]) * livello;
+let risolutezza = Math.trunc(livello / 2 + modMigliorato[3]);
+let ferita = 5 * livello;
+let staminaAttuali = stamina;
+let feritaAttuali = ferita;
+let risolutezzaAttuali = risolutezza;
+
+if (danni <= stamina) {
+    staminaAttuali = stamina - danni;
+} else {
+    staminaAttuali = 0;
+    feritaAttuali = ferita - (danni - stamina);
+}
+
+document.getElementById("pStamina").innerHTML = stamina;
+document.getElementById("pFerita").innerHTML = ferita;
+document.getElementById("pRisolutezza").innerHTML = risolutezza;
+document.getElementById("pStaminaAttuali").innerHTML = staminaAttuali;
+document.getElementById("pFeritaAttuali").innerHTML = feritaAttuali;
+document.getElementById("pRisolutezzaAttuali").innerHTML = risolutezzaAttuali;
+
+// Classe armatura
+var bonusEnergia = 0;
+var bonusCinetica = 1;
+
+let cae = 10 + bonusEnergia + modMigliorato[1];
+let cac = 10 + bonusCinetica + modMigliorato[1];
+let ca = 8 + cac;
+
+document.getElementById("cae").innerHTML = cae;
+document.getElementById("cac").innerHTML = cac;
+document.getElementById("ca").innerHTML = ca;
+
+// Tiri salvezza
+var tsBaseTempra = 3;
+var tsBaseRiflessi = 3;
+var tsBaseVolonta = 6;
+
+var modTempra = 3;
+var modRiflessi = 3;
+var modVolonta = 6;
+
+let tempra = tsBaseTempra + modTempra + modMigliorato[2];
+let riflessi = tsBaseRiflessi + modRiflessi + modMigliorato[1];
+let volonta = tsBaseVolonta + modVolonta + modMigliorato[4];
+
+document.getElementById("tempra").innerHTML = tempra;
+document.getElementById("riflessi").innerHTML = riflessi;
+document.getElementById("volonta").innerHTML = volonta;
+
+// Bonus attacco
+var bab = 6;
+
+let baMischia = bab + modMigliorato[0];
+let baDist = bab + modMigliorato[1];
+let baLancio = bab + modMigliorato[0];
+
+document.getElementById("baMischia").innerHTML = baMischia;
+document.getElementById("baDist").innerHTML = baDist;
+document.getElementById("baLancio").innerHTML = baLancio;
+
+// Abilità
+var abilita = [acrobazia, atletica, camuffare, computer, cultura, diplomazia, furtivita, ingegneria, intimidire, intuizione, medicina, misticismo, percezione, pilotare, professione, raggirare, rapiditaDiMano, scienzaBiologica, scienzaFisica, sopravvivenza];
+const MOD = [1,0,5,3,3,5,1,3,5,4,3,4,4,1,3,5,1,3,3,4];
+var grado = [5,6,7,5,2,3,3,4,2,7,0,0,5,3,4,3,4,0,0,0];
+var bonus = [0,0,0,3,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,1];
+var mVari = [0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0];
+for (var i=0; i<abilita.length; i++) {
+    abilita[i] = grado[i] + bonus[i] + modMigliorato[MOD[i]] + mVari[i];
+}
+
+document.getElementById("acrobazia").innerHTML = abilita[0];
+document.getElementById("atletica").innerHTML = abilita[1];
+document.getElementById("camuffare").innerHTML = abilita[2];
+document.getElementById("computer").innerHTML = abilita[3];
+document.getElementById("cultura").innerHTML = abilita[4];
+document.getElementById("diplomazia").innerHTML = abilita[5];
+document.getElementById("furtivita").innerHTML = abilita[6];
+document.getElementById("ingegneria").innerHTML = abilita[7];
+document.getElementById("intimidire").innerHTML = abilita[8];
+document.getElementById("intuizione").innerHTML = abilita[9];
+document.getElementById("medicina").innerHTML = abilita[10];
+document.getElementById("misticismo").innerHTML = abilita[11];
+document.getElementById("percezione").innerHTML = abilita[12];
+document.getElementById("pilotare").innerHTML = abilita[13];
+document.getElementById("professione").innerHTML = abilita[14];
+document.getElementById("raggirare").innerHTML = abilita[15];
+document.getElementById("rapiditaDiMano").innerHTML = abilita[16];
+document.getElementById("scienzaBiologica").innerHTML = abilita[17];
+document.getElementById("scienzaFisica").innerHTML = abilita[18];
+document.getElementById("sopravvivenza").innerHTML = abilita[19];

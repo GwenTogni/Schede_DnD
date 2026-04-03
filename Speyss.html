@@ -1,0 +1,358 @@
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="src/style.css" rel="stylesheet"/>
+    <title>DnD - Speyss Y</title>
+</head>
+<body>
+    <header>
+        <a href="Index.html" style="font-size: larger;">D&D</a>
+    </header>
+
+    <section style="padding-left: 30px;">
+        <h1>Speyss Y</h1>
+    </section>
+    <section style="padding-left: 30px;">
+        <h2>Scheda personaggio</h2>
+    </section>
+        
+    <section>
+        <div>
+            <h3>Personaggio</h3>
+            <table>
+                <tr>
+                    <th>classe</td>
+                    <td id="classe"></td>
+                </tr>
+                <tr>
+                    <th>razza</th>
+                    <td id="razza"></td>
+                </tr>
+                <tr>
+                    <th>livello</th>
+                    <td id="livello"></td>
+                </tr>
+                <tr>
+                    <th>taglia</th>
+                    <td id="taglia"></td>
+                </tr>
+                <tr>
+                    <th>velocità</th>
+                    <td id="velocita"></td>
+                </tr>
+                <tr>
+                    <th>allineamento</th>
+                    <td id="allineamento"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <h3>Punteggi caratteristica</h3>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>punteggio</th>
+                    <th>modificatore</th>
+                </tr>
+                <tr>
+                    <th>FOR</th>
+                    <td id="pFor+"></td>
+                    <td id="modFor+"></td>
+                </tr>
+                <tr>
+                    <th>DES</th>
+                    <td id="pDes+"></td>
+                    <td id="modDes+"></td>
+                </tr>
+                <tr>
+                    <th>COS</th>
+                    <td id="pCos+"></td>
+                    <td id="modCos+"></td>
+                </tr>
+                <tr>
+                    <th>INT</th>
+                    <td id="pInt+"></td>
+                    <td id="modInt+"></td>
+                </tr>
+                <tr>
+                    <th>SAG</th>
+                    <td id="pSag+"></td>
+                    <td id="modSag+"></td>
+                </tr>
+                <tr>
+                    <th>CAR</th>
+                    <td id="pCar+"></td>
+                    <td id="modCar+"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h3>Iniziativa</h3>
+        <table>
+            <tr>
+                <th>totale</th>
+                <th>d20</th>
+                <th>bonus</th>
+            </tr>
+            <tr>
+                <td id="iniziativa"></td>
+                <td id="d20"></td>
+                <td id="totBonusIniz"></td>
+            </tr>
+        </table>
+        </div>
+        <div>
+            <h3>Salute e risolutezza</h3>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>punti stamina</th>
+                    <th>punti ferita</th>
+                    <th>punti risolutezza</th>
+                </tr>
+                <tr>
+                    <th>totali</th>
+                    <td id="pStamina"></td>
+                    <td id="pFerita"></td>
+                    <td id="pRisolutezza"></td>
+                </tr>
+                <tr>
+                    <th>attuali</th>
+                    <td id="pStaminaAttuali"></td>
+                    <td id="pFeritaAttuali"></td>
+                    <td id="pRisolutezzaAttuali"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h3>Classe armatura</h3>
+            <table>
+                <tr>
+                    <th>CAE energia</th>
+                    <td id="cae"></td>
+                </tr>
+                <tr>
+                    <th>CAC cinetica</th>
+                    <td id="cac"></td>
+                </tr>
+                <tr>
+                    <th>CA manovre combattimento</th>
+                    <td id="ca"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h3>Tiri salvezza</h3>
+            <table>
+                <tr>
+                    <th>tempra (COS)</th>
+                    <td id="tempra"></td>
+                </tr>
+                <tr>
+                    <th>riflessi (DES)</th>
+                    <td id="riflessi"></td>
+                </tr>
+                <tr>
+                    <th>volontà (SAG)</th>
+                    <td id="volonta"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h3>Bonus attacco</h3>
+            <table>
+                <tr>
+                    <th>in mischia</th>
+                    <td id="baMischia"></td>
+                </tr>
+                <tr>
+                    <th>a distanza</th>
+                    <td id="baDist"></td>
+                </tr>
+                <tr>
+                    <th>da lancio</th>
+                    <td id="baLancio"></td>
+                </tr>
+            </table>
+        </div>
+ 
+        <div>
+            <h3>Abilità</h3>
+            <table>
+                <tr>
+                    <th>ACROBAZIA</th>
+                    <td id="acrobazia">0</td>
+                </tr>
+                <tr>
+                    <th>ATLETICA</th>
+                    <td id="atletica">0</td>
+                </tr>
+                <tr>
+                    <th>CAMUFFARE</th>
+                    <td id="camuffare">0</td>
+                </tr>
+                <tr>
+                    <th>COMPUTER</th>
+                    <td id="computer">0</td>
+                </tr>
+                <tr>
+                    <th>CULTURA</th>
+                    <td id="cultura">0</td>
+                </tr>
+                <tr>
+                    <th>DIPLOMAZIA</th>
+                    <td id="diplomazia">0</td>
+                </tr>
+                <tr>
+                    <th>FURTIVITÀ</th>
+                    <td id="furtivita">0</td>
+                </tr>
+                <tr>
+                    <th>INGEGNERIA</th>
+                    <td id="ingegneria">0</td>
+                </tr>
+                <tr>
+                    <th>INTIMIDIRE</th>
+                    <td id="intimidire">0</td>
+                </tr>
+                <tr>
+                    <th>INTUIZIONE</th>
+                    <td id="intuizione">0</td>
+                </tr>
+                <tr>
+                    <th>MEDICINA</th>
+                    <td id="medicina">0</td>
+                </tr>
+                <tr>
+                    <th>MISTICISMO</th>
+                    <td id="misticismo">0</td>
+                </tr>
+                <tr>
+                    <th>PERCEZIONE</th>
+                    <td id="percezione">0</td>
+                </tr>
+                <tr>
+                    <th>PILOTARE</th>
+                    <td id="pilotare">0</td>
+                </tr>
+                <tr>
+                    <th>PROFESSIONE</th>
+                    <td id="professione">0</td>
+                </tr>
+                <tr>
+                    <th>RAGGIRARE</th>
+                    <td id="raggirare">0</td>
+                </tr>
+                <tr>
+                    <th>RAPIDITÀ DI MANO</th>
+                    <td id="rapiditaDiMano">0</td>
+                </tr>
+                <tr>
+                    <th>SCIENZA BIOLOGICA</th>
+                    <td id="scienzaBiologica">0</td>
+                </tr>
+                <tr>
+                    <th>SCIENZA FISICA</th>
+                    <td id="scienzaFisica">0</td>
+                </tr>
+                <tr>
+                    <th>SOPRAVVIVENZA</th>
+                    <td id="sopravvivenza">0</td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <h3>Armi</h3>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>livello</th>
+                    <th>bonus attacco</th>
+                    <th>danno</th>
+                    <th>critico</th>
+                    <th>gittata</th>
+                    <th>tipo</th>
+                    <th>munizioni/uso</th>
+                    <th>speciale</th>
+                </tr>
+                <tr>
+                    <th>ARMA</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h3>Capacità</h3>
+            <p>visione crepuscolare</p>
+            <p>matrice imitativa</p>
+            <p>poliglotta</p>
+            <p>conoscenza specialistica</p>
+            <p>cacciatore rapido</p>
+            <p>cache incantesimi</p>
+        </div>
+        <div>
+            <h3>Talenti e competenze</h3>
+        </div>
+        <div>
+            <h3>Linguaggi</h3>
+            <p>galattico</p>
+            <p>terran</p>
+            <p>vesk</p>
+            <p>elfico</p>
+            <p>isoki</p>
+            <p>akiton</p>
+        </div>
+        <div>
+            <h3>Equipaggiamento</h3>
+            <p>computer</p>
+            <p>microfono registratore</p>
+            <p>kit attrezzi</p>
+            <p>torcia</p>
+            <h4>Crediti</h4>
+            <p>2500</p>
+        </div>
+        <div>
+            <h3>Capacità di trasporto</h3>
+            <table>
+                <tr>
+                    <th>non ingombrato</th>
+                    <th>ingombrato</th>
+                    <th>sovraccaricato</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h3>Punti esperienza</h3>
+            <table>
+                <tr>
+                    <th>ottenuti</th>
+                    <th>liv. successivo</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h3>Incantesimi</h3>
+        </div>
+    </section>
+    <script src="src/SpeyssY.js"></script>
+</body>
+</html>
