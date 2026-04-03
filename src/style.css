@@ -12,12 +12,6 @@ header {
     padding: 30px;
 }
 
-button {
-    border-radius: 100px;
-    border: none;
-    padding: 20px;
-}
-
 section {
     display: flex;
     flex-wrap: wrap;
@@ -25,7 +19,9 @@ section {
 }
 
 div {
+    background-color: rgb(102, 112, 68);
     padding: 30px;
+    margin: 5px 5px 0 0;
 }
 
 td {

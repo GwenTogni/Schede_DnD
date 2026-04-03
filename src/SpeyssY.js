@@ -67,12 +67,13 @@ document.getElementById("iniziativa").innerHTML = iniziativa;
 // Salute e risolutezza
 var danni = 0;
 
-let stamina = (5 + modMigliorato[2]) * livello;
-let risolutezza = Math.trunc(livello / 2 + modMigliorato[3]);
 let ferita = 5 * livello;
-let staminaAttuali = stamina;
-let feritaAttuali = ferita;
+let risolutezza = Math.trunc(livello / 2 + modMigliorato[3]);
+let stamina = (5 + modMigliorato[2]) * livello;
+
 let risolutezzaAttuali = risolutezza;
+let feritaAttuali = ferita;
+let staminaAttuali = stamina;
 
 if (danni <= stamina) {
     staminaAttuali = stamina - danni;
@@ -158,3 +159,62 @@ document.getElementById("rapiditaDiMano").innerHTML = abilita[16];
 document.getElementById("scienzaBiologica").innerHTML = abilita[17];
 document.getElementById("scienzaFisica").innerHTML = abilita[18];
 document.getElementById("sopravvivenza").innerHTML = abilita[19];
+
+// Armi
+document.getElementById("arma1").innerHTML = "pistola ad aghi tattica";
+document.getElementById("arma1Liv").innerHTML = 1;
+document.getElementById("arma1Danno").innerHTML = "1d4";
+document.getElementById("arma1Critico").innerHTML = "iniezione CD + 2";
+document.getElementById("arma1Gitt").innerHTML = 12;
+document.getElementById("arma1Tipo").innerHTML = "piccola, a mano";
+document.getElementById("arma1Uso").innerHTML = "8 dardi / 1";
+document.getElementById("arma1Sp").innerHTML = "analogica, iniezione";
+
+document.getElementById("arma2").innerHTML = "shuriken con scanalature";
+document.getElementById("arma2Liv").innerHTML = 1;
+document.getElementById("arma2Danno").innerHTML = "1d8";
+document.getElementById("arma2Critico").innerHTML = "sanguinamento 1d4";
+document.getElementById("arma2Gitt").innerHTML = 6;
+document.getElementById("arma2Tipo").innerHTML = "speciale, una mano";
+document.getElementById("arma2Uso").innerHTML = "-";
+document.getElementById("arma2Sp").innerHTML = "lancio, ricarica rapida";
+
+// Capacità
+document.getElementById("capacita1").innerHTML = "visione crepuscolare";
+document.getElementById("capacita2").innerHTML = "matrice imitativa";
+document.getElementById("capacita3").innerHTML = "poliglotta";
+document.getElementById("capacita4").innerHTML = "conoscenza specialistica";
+document.getElementById("capacita5").innerHTML = "cacciatore rapido";
+document.getElementById("capacita6").innerHTML = "cache incantesimi";
+
+// Linguaggi
+document.getElementById("lingua1").innerHTML = "galattico";
+document.getElementById("lingua2").innerHTML = "terran";
+document.getElementById("lingua3").innerHTML = "vesk";
+document.getElementById("lingua4").innerHTML = "elfico";
+document.getElementById("lingua5").innerHTML = "isoki";
+document.getElementById("lingua6").innerHTML = "akiton";
+
+// Equipaggiamento
+document.getElementById("equip1").innerHTML = "computer";
+document.getElementById("equip2").innerHTML = "microfono registratore";
+document.getElementById("equip3").innerHTML = "kit attrezzi";
+document.getElementById("equip4").innerHTML = "torcia";
+
+// Crediti
+var crediti = 2500;
+document.getElementById("crediti").innerHTML = crediti;
+
+// Capacità trasporto
+let trasporto = Math.trunc(modMigliorato[0] / 2);
+
+document.getElementById("trasportoNonIng").innerHTML = "< " + trasporto;
+document.getElementById("trasportoIng").innerHTML = "> " + trasporto;
+document.getElementById("trasportoSov").innerHTML = "> " + modMigliorato[0];
+
+// Punti esperienza
+var xp = 0;
+var xpLivello = 0;
+
+document.getElementById("xp").innerHTML = xp;
+document.getElementById("xpLivello").innerHTML = xpLivello;
