@@ -1,5 +1,5 @@
 // Personaggio
-var nome = "Isidora Ducati"
+var nome = "Nyx"
 var classe = "-";
 var background = "nobile";
 var razza = "umana";

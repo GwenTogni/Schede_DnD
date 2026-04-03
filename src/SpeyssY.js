@@ -1,4 +1,5 @@
 // Personaggio
+var nome = "Speyss Y"
 var classe = "tecnomante";
 var razza = "androide";
 var livello = 9;
@@ -6,6 +7,7 @@ var taglia = "media";
 var velocita = 9;
 var allineamento = "N";
 
+document.getElementById("nome").innerHTML = nome;
 document.getElementById("classe").innerHTML = classe;
 document.getElementById("razza").innerHTML = razza;
 document.getElementById("livello").innerHTML = livello;
