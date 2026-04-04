@@ -10,6 +10,8 @@ body {
 header {
     background-color: rgb(71, 80, 39);
     padding: 30px;
+    position: fixed;
+    width: 100%;
 }
 
 section {
@@ -57,6 +59,7 @@ a:hover {
 }
 
 .titolo {
+    margin-top: 100px;
     display: block;
     padding: 30px;
 }
@@ -64,4 +67,14 @@ a:hover {
 .segnale {
     background-color: #851a1a;
     border: 1px solid;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        position: relative;
+        display: block;
+    }
+    div {
+            margin: 0 5px 5px 5px;
+    }
 }

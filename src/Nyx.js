@@ -67,6 +67,7 @@ for (var i=0; i< punteggio.length; i++) {
     }
     budget += budgetAggiunto;
 }
+
 for (var i=0; i< pMigliorato.length; i++) {
     modMigliorato[i] = Math.trunc((pMigliorato[i] - 10) / 2);
 }
