@@ -74,7 +74,12 @@ a:hover {
         position: relative;
         display: block;
     }
+
     div {
             margin: 0 5px 5px 5px;
+    }
+
+    table {
+        max-width: 100vh;
     }
 }
