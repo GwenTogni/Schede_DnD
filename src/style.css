@@ -65,6 +65,7 @@ a:hover {
 }
 
 .segnale {
+    display: none;
     background-color: #851a1a;
     border: 1px solid;
 }

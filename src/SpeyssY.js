@@ -315,9 +315,8 @@ document.getElementById("scienzaBiologica").innerHTML = abilita[17];
 document.getElementById("scienzaFisica").innerHTML = abilita[18];
 document.getElementById("sopravvivenza").innerHTML = abilita[19];
 
-if (somma == gradiAbiilitaTot) {
-    document.getElementById("controlloGradi").style.display = "none";
-} else {
+if (somma != gradiAbiilitaTot) {
+    document.getElementById("controlloGradi").style.display = "block";
     if (somma < gradiAbiilitaTot) {
         document.getElementById("controlloGradi").innerHTML = "ERRORE nei calcoli! Aggiungi "+(gradiAbiilitaTot - somma);
     } else {
@@ -545,8 +544,7 @@ document.getElementById("inc34Durata").innerHTML = incantesimo34[2];
 document.getElementById("inc34Gitt").innerHTML = incantesimo34[3];
 document.getElementById("inc34Danno").innerHTML = incantesimo34[4];
 
-if (contaIncantesimi0 == numeroIncantesimi0 && contaIncantesimi1 == numeroIncantesimi1 && contaIncantesimi2 == numeroIncantesimi2 && contaIncantesimi3 == numeroIncantesimi3 && contaIncantesimi4 == numeroIncantesimi4 && contaIncantesimi5 == numeroIncantesimi5 && contaIncantesimi6 == numeroIncantesimi6) {
-    document.getElementById("controlloIncantesimi").style.display = "none";
-} else {
+if (contaIncantesimi0 != numeroIncantesimi0 || contaIncantesimi1 != numeroIncantesimi1 || contaIncantesimi2 != numeroIncantesimi2 || contaIncantesimi3 != numeroIncantesimi3 || contaIncantesimi4 != numeroIncantesimi4 || contaIncantesimi5 != numeroIncantesimi5 || contaIncantesimi6 != numeroIncantesimi6) {
+    document.getElementById("controlloIncantesimi").style.display = "block";
     document.getElementById("controlloIncantesimi").innerHTML = "ERRORE. Numero incantesimi errato! " + numeroIncantesimi0 +" "+ numeroIncantesimi1 +" "+ numeroIncantesimi2 +" "+ numeroIncantesimi3 +" "+ numeroIncantesimi4 +" "+ numeroIncantesimi5 +" "+ numeroIncantesimi6;
 }
