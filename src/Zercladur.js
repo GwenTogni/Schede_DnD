@@ -1,6 +1,6 @@
 // Personaggio
 var nome = "Zercladur Naïlo"
-var classe = "Ranger";
+var classe = "Ranger Addestra Draghi";
 var background = "forestiero";
 var razza = "elfo drow";
 var livello = 12;
@@ -18,35 +18,35 @@ document.getElementById("allineamento").innerHTML = allineamento;
 
 // Punteggi caratteristica
 var budget = 27;
-budgetAggiunto = 0;
+var budgetAggiunto = 0;
 
 if (livello >= 4) {
     budgetAggiunto += 2;
-} else if (livello >= 8) {
-    budgetAggiunto += 4;
-} else if (livello >= 10) {
-    budgetAggiunto += 6;
-} else if (livello >= 12) {
-    budgetAggiunto += 8;
-} else if (livello >= 16) {
-    budgetAggiunto += 9;
-} else if (livello >= 19) {
-    budgetAggiunto += 10;
+} if (livello >= 8) {
+    budgetAggiunto += 2;
+} if (livello >= 10) {
+    budgetAggiunto += 2;
+} if (livello >= 12) {
+    budgetAggiunto += 2;
+} if (livello >= 16) {
+    budgetAggiunto += 2;
+} if (livello >= 19) {
+    budgetAggiunto += 2;
 }
 
-var forza = 8;
-var destrezza = 18;
-var costituzione = 10;
-var intelligenza = 16;
-var saggezza = 12;
-var carisma = 14;
+var forza = 18;
+var destrezza = 10;
+var costituzione = 14;
+var intelligenza = 12;
+var saggezza = 16;
+var carisma = 7;
 
 let forMigliorata = forza;
-let desMigliorata = destrezza;
+let desMigliorata = destrezza + 2;
 let cosMigliorata = costituzione;
-let intMigliorata = intelligenza + 2;
+let intMigliorata = intelligenza;
 let sagMigliorata = saggezza;
-let carMigliorata = carisma;
+let carMigliorata = carisma + 1;
 
 var punteggio = [forza, destrezza, costituzione, intelligenza, saggezza, carisma];
 let modificatore = [forza, destrezza, costituzione, intelligenza, saggezza, carisma];
@@ -65,8 +65,8 @@ for (var i=0; i< punteggio.length; i++) {
     } else {
         budgetAggiunto -= (punteggio[i] - 8);
     }
-    budget += budgetAggiunto;
 }
+budget += budgetAggiunto;
 
 for (var i=0; i< pMigliorato.length; i++) {
     modMigliorato[i] = Math.trunc((pMigliorato[i] - 10) / 2);
@@ -104,7 +104,7 @@ document.getElementById("iniziativa").innerHTML = iniziativa;
 // Salute
 var danni = 0;
 
-let ferita = 8 + modMigliorato[2] + (5 + modMigliorato[2]) * livello;
+let ferita = 10 + modMigliorato[2] + (6 + modMigliorato[2]) * livello;
 let feritaAttuali = ferita;
 
 feritaAttuali = ferita - danni;
@@ -113,7 +113,7 @@ document.getElementById("pFerita").innerHTML = ferita;
 document.getElementById("pFeritaAttuali").innerHTML = feritaAttuali;
 
 // Classe armatura
-let ca = modMigliorato[0];
+let ca = 10 + modMigliorato[0];
 
 document.getElementById("ca").innerHTML = ca;
 
@@ -135,7 +135,7 @@ document.getElementById("tsCar").innerHTML = tsCar;
 // Abilità
 var abilita = [acrobazia, addestrareAnimali, arcano, atletica, furtivita, indagare, inganno, intimidire, intrattenere, intuizione, medicina, natura, percezione, persuasione, rapiditaDiMano, religione, sopravvivenza, storia];
 const MOD = [1,4,3,0,1,3,5,5,5,4,4,3,4,5,1,3,4,3];
-var bonus = [3,0,0,0,3,3,3,0,0,3,0,0,3,0,0,0,0,0];
+var bonus = [0,4,0,0,0,0,0,0,0,0,0,4,4,0,0,0,0,0];
 
 for (var i=0; i<abilita.length; i++) {
     abilita[i] = bonus[i] + modMigliorato[MOD[i]];
@@ -161,10 +161,10 @@ document.getElementById("sopravvivenza").innerHTML = abilita[16];
 document.getElementById("storia").innerHTML = abilita[17];
 
 // Armi
-var arma1 = ["mazza", 7, 3, 1+" d"+8, "contatto", "perf.", 1, "-"]
-var arma2 = ["stocco", 7, 3, 1+" d"+8, "contatto", "perf.", 1, "-"]
-var arma3 = ["arco corto", 7, 3, 1+" d"+6, 96+" m", "perf.", 1, 20]
-var arma4 = ["pugnale", 7, 3, 1+" d"+4, 18+" m", "perf.", 2, "-"]
+var arma1 = ["spada corta", 8, 4, 1+" d"+6, "contatto", "perf.", 2, "-"]
+var arma2 = ["mazza chiodata", 6, 2, 1+" d"+8, "contatto", "perf.", 1, "-"]
+var arma3 = ["arco lungo", 6, 2, 1+" d"+8, 180+" m", "perf.", 1, 20]
+var arma4 = ["pugnale sacrificale", 7, 3, 1+" d"+4, "contatto", "perf.", 1, "-"]
 
 document.getElementById("arma1").innerHTML = arma1[0];
 document.getElementById("arma1Tc").innerHTML = arma1[1];
@@ -203,7 +203,7 @@ document.getElementById("arma4Quant").innerHTML = arma4[6];
 document.getElementById("arma4Muniz").innerHTML = arma4[7];
 
 // Privilegi e tratti
-var capacita = ["astuzia gnomesca", "lottatore", "maestria", "attacco furtivo", "gergo ladresco", "occhio dell'osservatore", "tiratore scelto", "azione scaltra", "schivata prodigiosa", "elusione", "talento mobilità", "dote affidabile"]
+var capacita = ["nemico prescelto", "esploratore nato", "compagno di Drake", "respiro di Drake", "legame di zanna e di scaglia", "trovare cibo e acqua", "consapevolezza primordiale", "attacco extra", "andatura sul territorio", "nascondersi in piena vista", "tiratore scelto", "adepto elementale"]
 
 document.getElementById("capacita1").innerHTML = capacita[0];
 document.getElementById("capacita2").innerHTML = capacita[1];
@@ -219,7 +219,7 @@ document.getElementById("capacita11").innerHTML = capacita[10];
 document.getElementById("capacita12").innerHTML = capacita[11];
 
 // Linguaggi
-var lingua = ["comune", "gnomesco", "sottocomune", "goblin"]
+var lingua = ["comune", "elfico", "draconico"]
 
 document.getElementById("lingua1").innerHTML = lingua[0];
 document.getElementById("lingua2").innerHTML = lingua[1];
@@ -230,9 +230,7 @@ document.getElementById("lingua4").innerHTML = lingua[3];
 document.getElementById("equip1").innerHTML = "...";
 
 // Crediti
-var mr = 29;
-var mo = 557;
-document.getElementById("mr").innerHTML = mo+" MR";
+var mo = 20;
 document.getElementById("mo").innerHTML = mo+" MO";
 
 // Punti esperienza
@@ -250,16 +248,19 @@ var contaIncantesimi5 = 0;
 var contaIncantesimi6 = 0;
 
 // Livello 0
-var incantesimo01 = ["mano magica", 1+" AZ", 1+" min", 9+" m", 0]; contaIncantesimi0++;
-var incantesimo02 = ["spruzzo velenoso", 1+" AZ", "istantaneo", 3+" m", 3+" d"+12+" veleno"]; contaIncantesimi0++;
-var incantesimo03 = ["illusione minore", 1+" AZ", 1+" min", 9+" m", 0]; contaIncantesimi0++;
+var incantesimo01 = ["luci danzanti", 1+" AZ", 1+" min", 9+" m", 0]; contaIncantesimi0++;
 
-var incantesimo11 = ["camuffare se stesso", 1+" AZ", 1+" h", "incantatore", 0]; contaIncantesimi1++;
-var incantesimo12 = ["immagine silenziosa", 1+" AZ", 10+" min", 18+" m", 0]; contaIncantesimi1++;
+var incantesimo11 = ["luminescenza", 1+" AZ", 1+" h", "incantatore", 0]; contaIncantesimi1++;
+var incantesimo12 = ["parlare con gli animali", 1+" AZ", 10+" min", 18+" m", 0]; contaIncantesimi1++;
+var incantesimo12 = ["colpo intrappolante", 1+" AZ", 10+" min", 18+" m", 0]; contaIncantesimi1++;
 
-var incantesimo21 = ["immagine speculare", 1+" AZ", 1+" min", "incantatore", 0]; contaIncantesimi2++;
-var incantesimo22 = ["invisibilità", 1+" AZ", 1+" h", "contatto", 0]; contaIncantesimi2++;
-var incantesimo23 = ["sfuocatura", 1+" AZ", 1+" min", "incantatore", "svantaggio TC"]; contaIncantesimi2++;
+var incantesimo21 = ["oscurità", 1+" AZ", 1+" min", "incantatore", 0]; contaIncantesimi2++;
+var incantesimo22 = ["cordone di frecce", 1+" AZ", 1+" h", "contatto", 0]; contaIncantesimi2++;
+
+var incantesimo31 = ["respirare sott'acqua", 1+" AZ", 1+" min", "incantatore", 0]; contaIncantesimi2++;
+var incantesimo32 = ["parlare coi vegetali", 1+" AZ", 1+" h", "contatto", 0]; contaIncantesimi2++;
+var incantesimo33 = ["freccia folgorante", 1+" AZ", 1+" min", "incantatore", "svantaggio TC"]; contaIncantesimi2++;
+var incantesimo34 = ["muro di vento", 1+" AZ", 1+" min", "incantatore", "svantaggio TC"]; contaIncantesimi2++;
 
 // Livello 0
 document.getElementById("incantesimo01").innerHTML = incantesimo01[0];
@@ -267,18 +268,6 @@ document.getElementById("inc01Tempo").innerHTML = incantesimo01[1];
 document.getElementById("inc01Durata").innerHTML = incantesimo01[2];
 document.getElementById("inc01Gitt").innerHTML = incantesimo01[3];
 document.getElementById("inc01Danno").innerHTML = incantesimo01[4];
-
-document.getElementById("incantesimo02").innerHTML = incantesimo02[0];
-document.getElementById("inc02Tempo").innerHTML = incantesimo02[1];
-document.getElementById("inc02Durata").innerHTML = incantesimo02[2];
-document.getElementById("inc02Gitt").innerHTML = incantesimo02[3];
-document.getElementById("inc02Danno").innerHTML = incantesimo02[4];
-
-document.getElementById("incantesimo03").innerHTML = incantesimo03[0];
-document.getElementById("inc03Tempo").innerHTML = incantesimo03[1];
-document.getElementById("inc03Durata").innerHTML = incantesimo03[2];
-document.getElementById("inc03Gitt").innerHTML = incantesimo03[3];
-document.getElementById("inc03Danno").innerHTML = incantesimo03[4];
 
 // Livello 1
 document.getElementById("incantesimo11").innerHTML = incantesimo11[0];
@@ -293,6 +282,12 @@ document.getElementById("inc12Durata").innerHTML = incantesimo12[2];
 document.getElementById("inc12Gitt").innerHTML = incantesimo12[3];
 document.getElementById("inc12Danno").innerHTML = incantesimo12[4];
 
+document.getElementById("incantesimo13").innerHTML = incantesimo13[0];
+document.getElementById("inc13Tempo").innerHTML = incantesimo13[1];
+document.getElementById("inc13Durata").innerHTML = incantesimo13[2];
+document.getElementById("inc13Gitt").innerHTML = incantesimo13[3];
+document.getElementById("inc13Danno").innerHTML = incantesimo13[4];
+
 // Livello 2
 document.getElementById("incantesimo21").innerHTML = incantesimo21[0];
 document.getElementById("inc21Tempo").innerHTML = incantesimo21[1];
@@ -306,11 +301,30 @@ document.getElementById("inc22Durata").innerHTML = incantesimo22[2];
 document.getElementById("inc22Gitt").innerHTML = incantesimo22[3];
 document.getElementById("inc22Danno").innerHTML = incantesimo22[4];
 
-document.getElementById("incantesimo23").innerHTML = incantesimo23[0];
-document.getElementById("inc23Tempo").innerHTML = incantesimo23[1];
-document.getElementById("inc23Durata").innerHTML = incantesimo23[2];
-document.getElementById("inc23Gitt").innerHTML = incantesimo23[3];
-document.getElementById("inc23Danno").innerHTML = incantesimo23[4];
+// Livello 3
+document.getElementById("incantesimo31").innerHTML = incantesimo31[0];
+document.getElementById("inc31Tempo").innerHTML = incantesimo31[1];
+document.getElementById("inc31Durata").innerHTML = incantesimo31[2];
+document.getElementById("inc31Gitt").innerHTML = incantesimo31[3];
+document.getElementById("inc31Danno").innerHTML = incantesimo31[4];
+
+document.getElementById("incantesimo32").innerHTML = incantesimo32[0];
+document.getElementById("inc32Tempo").innerHTML = incantesimo32[1];
+document.getElementById("inc32Durata").innerHTML = incantesimo32[2];
+document.getElementById("inc32Gitt").innerHTML = incantesimo32[3];
+document.getElementById("inc32Danno").innerHTML = incantesimo32[4];
+
+document.getElementById("incantesimo33").innerHTML = incantesimo33[0];
+document.getElementById("inc33Tempo").innerHTML = incantesimo33[1];
+document.getElementById("inc33Durata").innerHTML = incantesimo33[2];
+document.getElementById("inc33Gitt").innerHTML = incantesimo33[3];
+document.getElementById("inc33Danno").innerHTML = incantesimo33[4];
+
+document.getElementById("incantesimo34").innerHTML = incantesimo34[0];
+document.getElementById("inc34Tempo").innerHTML = incantesimo34[1];
+document.getElementById("inc34Durata").innerHTML = incantesimo34[2];
+document.getElementById("inc34Gitt").innerHTML = incantesimo34[3];
+document.getElementById("inc34Danno").innerHTML = incantesimo34[4];
 
 // if (contaIncantesimi0 == numeroIncantesimi0 && contaIncantesimi1 == numeroIncantesimi1 && contaIncantesimi2 == numeroIncantesimi2 && contaIncantesimi3 == numeroIncantesimi3 && contaIncantesimi4 == numeroIncantesimi4 && contaIncantesimi5 == numeroIncantesimi5 && contaIncantesimi6 == numeroIncantesimi6) {
 //     document.getElementById("controlloIncantesimi").style.display = "none";

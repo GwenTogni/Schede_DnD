@@ -113,7 +113,7 @@ document.getElementById("pFerita").innerHTML = ferita;
 document.getElementById("pFeritaAttuali").innerHTML = feritaAttuali;
 
 // Classe armatura
-let ca = modMigliorato[0];
+let ca = 10 + modMigliorato[0];
 
 document.getElementById("ca").innerHTML = ca;
 
