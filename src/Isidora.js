@@ -104,7 +104,7 @@ document.getElementById("iniziativa").innerHTML = iniziativa;
 // Salute
 var danni = 0;
 
-let ferita = 10;
+let ferita = 10 + modMigliorato[2];
 let feritaAttuali = ferita;
 
 feritaAttuali = ferita - danni;
