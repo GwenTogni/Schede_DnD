@@ -2,7 +2,7 @@
 var nome = "Isidora Ducati"
 var classe = "-";
 var background = "nobile";
-var razza = "umana";
+var razza = "Umana";
 var livello = 1;
 var taglia = "media";
 var velocita = 9;

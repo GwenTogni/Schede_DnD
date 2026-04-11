@@ -1,12 +1,12 @@
 // Personaggio
-var nome = "Isidora Ducati"
-var classe = "-";
-var background = "nobile";
-var razza = "umana";
+var nome = "Petra Del Ponte"
+var classe = "Guerriera";
+var background = "barista";
+var razza = "Umana";
 var livello = 1;
 var taglia = "media";
 var velocita = 9;
-var allineamento = "CB";
+var allineamento = "CN";
 
 document.getElementById("nome").innerHTML = nome;
 document.getElementById("classe").innerHTML = classe;
@@ -35,12 +35,12 @@ if (livello >= 4) {
     budgetAggiunto += 2;
 }
 
-var forza = 13;
+var forza = 14;
 var destrezza = 13;
 var costituzione = 13;
-var intelligenza = 15;
-var saggezza = 9;
-var carisma = 10;
+var intelligenza = 12;
+var saggezza = 10;
+var carisma = 12;
 
 let forMigliorata = forza + 1;
 let desMigliorata = destrezza + 1;

@@ -2,7 +2,7 @@
 var nome = "Nyx Lorilla Dublelock Murnig"
 var classe = "Ladro Mistificatore Arcano";
 var background = "investigatore";
-var razza = "gnomo delle montagne";
+var razza = "Gnomo delle Montagne";
 var livello = 13;
 var taglia = "piccola";
 var velocita = 10.5;

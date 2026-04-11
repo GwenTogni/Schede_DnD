@@ -1,8 +1,8 @@
 // Personaggio
 var nome = "Delia Grimaldi"
-var classe = "Druido";
+var classe = "Druida";
 var background = "istruttrice di yoga e tai chi";
-var razza = "umana";
+var razza = "Umana";
 var livello = 1;
 var taglia = "media";
 var velocita = 9;
@@ -35,12 +35,12 @@ if (livello >= 4) {
     budgetAggiunto += 2;
 }
 
-var forza = 13;
+var forza = 10;
 var destrezza = 13;
 var costituzione = 13;
-var intelligenza = 15;
-var saggezza = 9;
-var carisma = 10;
+var intelligenza = 12;
+var saggezza = 14;
+var carisma = 12;
 
 let forMigliorata = forza + 1;
 let desMigliorata = destrezza + 1;

@@ -1,8 +1,8 @@
 // Personaggio
-var nome = "Isidora Ducati"
-var classe = "-";
-var background = "nobile";
-var razza = "umana";
+var nome = "Eris Cordis"
+var classe = "Warlock";
+var background = "studentessa di informatica";
+var razza = "Umana";
 var livello = 1;
 var taglia = "media";
 var velocita = 9;
@@ -35,11 +35,11 @@ if (livello >= 4) {
     budgetAggiunto += 2;
 }
 
-var forza = 13;
+var forza = 10;
 var destrezza = 13;
 var costituzione = 13;
-var intelligenza = 15;
-var saggezza = 9;
+var intelligenza = 16;
+var saggezza = 10;
 var carisma = 10;
 
 let forMigliorata = forza + 1;

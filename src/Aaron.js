@@ -2,7 +2,7 @@
 var nome = "Aaron Falco"
 var classe = "Ranger";
 var background = "apprendista selvicoltore";
-var razza = "umana";
+var razza = "Umana";
 var livello = 1;
 var taglia = "media";
 var velocita = 9;
@@ -35,12 +35,12 @@ if (livello >= 4) {
     budgetAggiunto += 2;
 }
 
-var forza = 13;
-var destrezza = 13;
+var forza = 10;
+var destrezza = 14;
 var costituzione = 13;
-var intelligenza = 15;
-var saggezza = 9;
-var carisma = 10;
+var intelligenza = 14;
+var saggezza = 13;
+var carisma = 9;
 
 let forMigliorata = forza + 1;
 let desMigliorata = destrezza + 1;

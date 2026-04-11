@@ -1,15 +1,16 @@
 // Personaggio
-var nome = "Isidora Ducati"
-var classe = "-";
-var background = "nobile";
-var razza = "umana";
+var nome = "Flavio Scott"
+var classe = "Barbaro";
+var background = "studente di chimica";
+var razza = "Umana";
 var livello = 1;
 var taglia = "media";
 var velocita = 9;
-var allineamento = "CB";
+var allineamento = "NB";
 
 document.getElementById("nome").innerHTML = nome;
 document.getElementById("classe").innerHTML = classe;
+document.getElementById("background").innerHTML = background;
 document.getElementById("razza").innerHTML = razza;
 document.getElementById("livello").innerHTML = livello;
 document.getElementById("taglia").innerHTML = taglia;
@@ -34,11 +35,11 @@ if (livello >= 4) {
     budgetAggiunto += 2;
 }
 
-var forza = 13;
+var forza = 15;
 var destrezza = 13;
 var costituzione = 13;
-var intelligenza = 15;
-var saggezza = 9;
+var intelligenza = 12;
+var saggezza = 10;
 var carisma = 10;
 
 let forMigliorata = forza + 1;

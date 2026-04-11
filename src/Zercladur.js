@@ -2,7 +2,7 @@
 var nome = "Zercladur Naïlo"
 var classe = "Ranger Addestra Draghi";
 var background = "forestiero";
-var razza = "elfo drow";
+var razza = "Elfo Drow";
 var livello = 12;
 var taglia = "media";
 var velocita = 9;

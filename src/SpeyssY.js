@@ -1,7 +1,7 @@
 // Personaggio
 var nome = "Speyss Y"
-var classe = "tecnomante";
-var razza = "androide";
+var classe = "Tecnomante";
+var razza = "Androide";
 var livello = 9;
 var taglia = "media";
 var velocita = 9;
