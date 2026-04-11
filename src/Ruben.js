@@ -37,9 +37,9 @@ if (livello >= 4) {
 
 var forza = 10;
 var destrezza = 13;
-var costituzione = 13;
-var intelligenza = 12;
-var saggezza = 10;
+var costituzione = 11;
+var intelligenza = 13;
+var saggezza = 11;
 var carisma = 15;
 
 let forMigliorata = forza + 1;
@@ -165,7 +165,7 @@ document.getElementById("storia").innerHTML = abilita[17];
 document.getElementById("capacita1").innerHTML = "...";
 
 // Linguaggi
-var lingua = ["comune", "draconico"]
+var lingua = ["italiano", "inglese"]
 
 document.getElementById("lingua1").innerHTML = lingua[0];
 document.getElementById("lingua2").innerHTML = lingua[1];

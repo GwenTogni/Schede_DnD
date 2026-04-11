@@ -35,12 +35,12 @@ if (livello >= 4) {
     budgetAggiunto += 2;
 }
 
-var forza = 10;
-var destrezza = 13;
+var forza = 11;
+var destrezza = 12;
 var costituzione = 13;
-var intelligenza = 16;
-var saggezza = 10;
-var carisma = 10;
+var intelligenza = 15;
+var saggezza = 11;
+var carisma = 11;
 
 let forMigliorata = forza + 1;
 let desMigliorata = destrezza + 1;
@@ -165,7 +165,7 @@ document.getElementById("storia").innerHTML = abilita[17];
 document.getElementById("capacita1").innerHTML = "...";
 
 // Linguaggi
-var lingua = ["comune", "draconico"]
+var lingua = ["italiano", "inglese"]
 
 document.getElementById("lingua1").innerHTML = lingua[0];
 document.getElementById("lingua2").innerHTML = lingua[1];
