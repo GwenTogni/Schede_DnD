@@ -1,12 +1,12 @@
 // Personaggio
-var nome = "Isidora Ducati"
-var classe = "-";
-var background = "nobile";
+var nome = "Aaron Falco"
+var classe = "Ranger";
+var background = "apprendista selvicoltore";
 var razza = "umana";
 var livello = 1;
 var taglia = "media";
 var velocita = 9;
-var allineamento = "CB";
+var allineamento = "NB";
 
 document.getElementById("nome").innerHTML = nome;
 document.getElementById("classe").innerHTML = classe;

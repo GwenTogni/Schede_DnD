@@ -1,12 +1,12 @@
 // Personaggio
-var nome = "Isidora Ducati"
-var classe = "-";
-var background = "nobile";
+var nome = "Delia Grimaldi"
+var classe = "Druido";
+var background = "istruttrice di yoga e tai chi";
 var razza = "umana";
 var livello = 1;
 var taglia = "media";
 var velocita = 9;
-var allineamento = "CB";
+var allineamento = "N";
 
 document.getElementById("nome").innerHTML = nome;
 document.getElementById("classe").innerHTML = classe;

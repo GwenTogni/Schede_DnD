@@ -10,6 +10,7 @@ var allineamento = "LN";
 
 document.getElementById("nome").innerHTML = nome;
 document.getElementById("classe").innerHTML = classe;
+document.getElementById("background").innerHTML = background;
 document.getElementById("razza").innerHTML = razza;
 document.getElementById("livello").innerHTML = livello;
 document.getElementById("taglia").innerHTML = taglia;
