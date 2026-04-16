@@ -136,7 +136,7 @@ document.getElementById("tsCar").innerHTML = tsCar;
 // Abilità
 var abilita = [acrobazia, addestrareAnimali, arcano, atletica, furtivita, indagare, inganno, intimidire, intrattenere, intuizione, medicina, natura, percezione, persuasione, rapiditaDiMano, religione, sopravvivenza, storia];
 const MOD = [1,4,3,0,1,3,5,5,5,4,4,3,4,5,1,3,4,3];
-var bonus = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+var bonus = [0,0,0,0,0,0,2,2,0,0,0,0,2,0,2,0,0,0];
 
 for (var i=0; i<abilita.length; i++) {
     abilita[i] = bonus[i] + modMigliorato[MOD[i]];
@@ -162,7 +162,14 @@ document.getElementById("sopravvivenza").innerHTML = abilita[16];
 document.getElementById("storia").innerHTML = abilita[17];
 
 // Privilegi e tratti
-document.getElementById("capacita1").innerHTML = "...";
+document.getElementById("capacita1").innerHTML = "azione bonus ira";
+document.getElementById("capacita2").innerHTML = "falsa identità";
+document.getElementById("capacita3").innerHTML = "barare ai giochi d'azzardo";
+document.getElementById("capacita4").innerHTML = "comunic. telepatica col drago";
+document.getElementById("capacita5").innerHTML = "attacco irruento";
+document.getElementById("capacita6").innerHTML = "percezione del pericolo";
+document.getElementById("capacita7").innerHTML = "cammino primordiale del berserker";
+document.getElementById("capacita8").innerHTML = "attacco extra";
 
 // Linguaggi
 var lingua = ["comune", "orchesco"]
@@ -174,22 +181,71 @@ document.getElementById("lingua2").innerHTML = lingua[1];
 document.getElementById("equip1").innerHTML = "...";
 
 // Crediti
-var crediti = 0;
-document.getElementById("crediti").innerHTML = crediti;
+var mo = 32;
+document.getElementById("mo").innerHTML = mo;
 
 // Punti esperienza
 var xp = 0;
 
 document.getElementById("xp").innerHTML = xp;
 
-// Incantesimi
-var contaIncantesimi0 = 0;
-var contaIncantesimi1 = 0;
-var contaIncantesimi2 = 0;
-var contaIncantesimi3 = 0;
-var contaIncantesimi4 = 0;
-var contaIncantesimi5 = 0;
-var contaIncantesimi6 = 0;
+var arma1 = ["ascia bipenne", 5, 5, 1+" d"+12, "contatto", "tagl.", 1, "-"]
+var arma2 = ["ascia", 5, 5, 1+" d"+6, "contatto", "tagl.", 2, "-"]
+var arma3 = ["balestra", 5, 5, 1+" d"+12, 96+" m", "perf.", 1, 20]
+var arma4 = ["arco", 5, 5, 1+" d"+8, 96+" m", "perf.", 2, 20]
+var arma5 = ["martello", 5, 5, 1+" d"+8+" + "+3, "contatto", "fuoco", 1, "-"]
+var arma6 = ["giavellotto", 5, 5, 1+" d"+6, 18+" m", "perf.", 4, "-"]
 
-// Livello 0
-var incantesimo01 = ["...", 0+" AZ", 0+" round", 0+" m", 0]; contaIncantesimi0++;
+document.getElementById("arma1").innerHTML = arma1[0];
+document.getElementById("arma1Tc").innerHTML = arma1[1];
+document.getElementById("arma1BDanno").innerHTML = arma1[2];
+document.getElementById("arma1Danno").innerHTML = arma1[3];
+document.getElementById("arma1Gitt").innerHTML = arma1[4];
+document.getElementById("arma1Tipo").innerHTML = arma1[5];
+document.getElementById("arma1Quant").innerHTML = arma1[6];
+document.getElementById("arma1Muniz").innerHTML = arma1[7];
+
+document.getElementById("arma2").innerHTML = arma2[0];
+document.getElementById("arma2Tc").innerHTML = arma2[1];
+document.getElementById("arma2BDanno").innerHTML = arma2[2];
+document.getElementById("arma2Danno").innerHTML = arma2[3];
+document.getElementById("arma2Gitt").innerHTML = arma2[4];
+document.getElementById("arma2Tipo").innerHTML = arma2[5];
+document.getElementById("arma2Quant").innerHTML = arma2[6];
+document.getElementById("arma2Muniz").innerHTML = arma2[7];
+
+document.getElementById("arma3").innerHTML = arma3[0];
+document.getElementById("arma3Tc").innerHTML = arma3[1];
+document.getElementById("arma3BDanno").innerHTML = arma3[2];
+document.getElementById("arma3Danno").innerHTML = arma3[3];
+document.getElementById("arma3Gitt").innerHTML = arma3[4];
+document.getElementById("arma3Tipo").innerHTML = arma3[5];
+document.getElementById("arma3Quant").innerHTML = arma3[6];
+document.getElementById("arma3Muniz").innerHTML = arma3[7];
+
+document.getElementById("arma4").innerHTML = arma4[0];
+document.getElementById("arma4Tc").innerHTML = arma4[1];
+document.getElementById("arma4BDanno").innerHTML = arma4[2];
+document.getElementById("arma4Danno").innerHTML = arma4[3];
+document.getElementById("arma4Gitt").innerHTML = arma4[4];
+document.getElementById("arma4Tipo").innerHTML = arma4[5];
+document.getElementById("arma4Quant").innerHTML = arma4[6];
+document.getElementById("arma4Muniz").innerHTML = arma4[7];
+
+document.getElementById("arma5").innerHTML = arma5[0];
+document.getElementById("arma5Tc").innerHTML = arma5[1];
+document.getElementById("arma5BDanno").innerHTML = arma5[2];
+document.getElementById("arma5Danno").innerHTML = arma5[3];
+document.getElementById("arma5Gitt").innerHTML = arma5[4];
+document.getElementById("arma5Tipo").innerHTML = arma5[5];
+document.getElementById("arma5Quant").innerHTML = arma5[6];
+document.getElementById("arma5Muniz").innerHTML = arma5[7];
+
+document.getElementById("arma6").innerHTML = arma6[0];
+document.getElementById("arma6Tc").innerHTML = arma6[1];
+document.getElementById("arma6BDanno").innerHTML = arma6[2];
+document.getElementById("arma6Danno").innerHTML = arma6[3];
+document.getElementById("arma6Gitt").innerHTML = arma6[4];
+document.getElementById("arma6Tipo").innerHTML = arma6[5];
+document.getElementById("arma6Quant").innerHTML = arma6[6];
+document.getElementById("arma6Muniz").innerHTML = arma6[7];
