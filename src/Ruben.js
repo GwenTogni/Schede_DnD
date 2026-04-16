@@ -1,7 +1,7 @@
 // Personaggio
 var nome = "Ruben Franchi"
 var classe = "Ladro";
-var background = "truffatore";
+var background = "ciarlatano";
 var razza = "Umana";
 var livello = 1;
 var taglia = "media";
