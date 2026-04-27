@@ -58,6 +58,10 @@ a:hover {
     color: rgb(220, 237, 159);
 }
 
+img {
+    max-height: 500px;
+}
+
 .titolo {
     margin-top: 100px;
     display: block;
