@@ -105,7 +105,7 @@ document.getElementById("iniziativa").innerHTML = iniziativa;
 // Salute
 var danni = 0;
 
-let ferita = 12 + modMigliorato[2] + (7 + modMigliorato[2]) * livello;
+let ferita = 12 + modMigliorato[2] + (7 + modMigliorato[2]) * (livello - 1);
 let feritaAttuali = ferita;
 
 feritaAttuali = ferita - danni;
@@ -189,6 +189,7 @@ var xp = 0;
 
 document.getElementById("xp").innerHTML = xp;
 
+// Armi
 var arma1 = ["ascia bipenne", 5, 5, 1+" d"+12, "contatto", "tagl.", 1, "-"]
 var arma2 = ["ascia", 5, 5, 1+" d"+6, "contatto", "tagl.", 2, "-"]
 var arma3 = ["balestra", 5, 5, 1+" d"+12, 96+" m", "perf.", 1, 20]

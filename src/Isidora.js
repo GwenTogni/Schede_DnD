@@ -1,9 +1,9 @@
 // Personaggio
 var nome = "Isidora Ducati"
-var classe = "-";
+var classe = "Cacciatore del Sangue";
 var background = "nobile";
 var razza = "Umana";
-var livello = 1;
+var livello = 2;
 var taglia = "media";
 var velocita = 9;
 var allineamento = "CB";
@@ -105,7 +105,7 @@ document.getElementById("iniziativa").innerHTML = iniziativa;
 // Salute
 var danni = 0;
 
-let ferita = 10 + modMigliorato[2];
+let ferita = 10 + modMigliorato[2] + (6 + modMigliorato[2]) * (livello - 1);
 let feritaAttuali = ferita;
 
 feritaAttuali = ferita - danni;
@@ -114,7 +114,7 @@ document.getElementById("pFerita").innerHTML = ferita;
 document.getElementById("pFeritaAttuali").innerHTML = feritaAttuali;
 
 // Classe armatura
-let ca = 10 + modMigliorato[0];
+let ca = 16 + modMigliorato[0];
 
 document.getElementById("ca").innerHTML = ca;
 
@@ -162,7 +162,11 @@ document.getElementById("sopravvivenza").innerHTML = abilita[16];
 document.getElementById("storia").innerHTML = abilita[17];
 
 // Privilegi e tratti
-document.getElementById("capacita1").innerHTML = "...";
+document.getElementById("capacita1").innerHTML = "posizione privilegiata";
+document.getElementById("capacita2").innerHTML = "flagello del cacciatore";
+document.getElementById("capacita3").innerHTML = "maledizione del sangue";
+document.getElementById("capacita4").innerHTML = "stile di combattimento: tiro con l'arco";
+document.getElementById("capacita5").innerHTML = "rito cremisi";
 
 // Linguaggi
 var lingua = ["comune", "draconico"]
@@ -181,6 +185,38 @@ document.getElementById("crediti").innerHTML = crediti;
 var xp = 0;
 
 document.getElementById("xp").innerHTML = xp;
+
+// Armi
+var arma1 = ["cerbottana", 4, 4, 1, 30+" m", "perf.", 1, "-"]
+var arma2 = ["balestra", 4, 4, 1+" d"+8, 20+" m", "perf.", 1, 20]
+var arma3 = ["pugnale", 4, 4, 1+" d"+4, 18+" m", "perf.", 1, "-"]
+
+document.getElementById("arma1").innerHTML = arma1[0];
+document.getElementById("arma1Tc").innerHTML = arma1[1];
+document.getElementById("arma1BDanno").innerHTML = arma1[2];
+document.getElementById("arma1Danno").innerHTML = arma1[3];
+document.getElementById("arma1Gitt").innerHTML = arma1[4];
+document.getElementById("arma1Tipo").innerHTML = arma1[5];
+document.getElementById("arma1Quant").innerHTML = arma1[6];
+document.getElementById("arma1Muniz").innerHTML = arma1[7];
+
+document.getElementById("arma2").innerHTML = arma2[0];
+document.getElementById("arma2Tc").innerHTML = arma2[1];
+document.getElementById("arma2BDanno").innerHTML = arma2[2];
+document.getElementById("arma2Danno").innerHTML = arma2[3];
+document.getElementById("arma2Gitt").innerHTML = arma2[4];
+document.getElementById("arma2Tipo").innerHTML = arma2[5];
+document.getElementById("arma2Quant").innerHTML = arma2[6];
+document.getElementById("arma2Muniz").innerHTML = arma2[7];
+
+document.getElementById("arma3").innerHTML = arma3[0];
+document.getElementById("arma3Tc").innerHTML = arma3[1];
+document.getElementById("arma3BDanno").innerHTML = arma3[2];
+document.getElementById("arma3Danno").innerHTML = arma3[3];
+document.getElementById("arma3Gitt").innerHTML = arma3[4];
+document.getElementById("arma3Tipo").innerHTML = arma3[5];
+document.getElementById("arma3Quant").innerHTML = arma3[6];
+document.getElementById("arma3Muniz").innerHTML = arma3[7];
 
 // Incantesimi
 var contaIncantesimi0 = 0;
