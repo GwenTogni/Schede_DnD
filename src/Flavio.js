@@ -1,5 +1,5 @@
 // Personaggio
-var nome = "Flavio Scott"
+var nome = "Flavio McGuinness"
 var classe = "Barbaro";
 var background = "studente di chimica";
 var razza = "Umana";

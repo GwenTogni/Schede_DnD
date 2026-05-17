@@ -1,5 +1,5 @@
 // Personaggio
-var nome = "Eris Cordis"
+var nome = "Eris Curtis"
 var classe = "Warlock";
 var background = "studentessa di informatica";
 var razza = "Umana";

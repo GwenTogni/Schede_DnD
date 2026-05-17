@@ -3,7 +3,7 @@ var nome = "Isidora Ducati"
 var classe = "Cacciatore del Sangue";
 var background = "nobile";
 var razza = "Umana";
-var livello = 2;
+var livello = 3;
 var taglia = "media";
 var velocita = 9;
 var allineamento = "CB";
@@ -175,21 +175,26 @@ document.getElementById("lingua1").innerHTML = lingua[0];
 document.getElementById("lingua2").innerHTML = lingua[1];
 
 // Equipaggiamento
-document.getElementById("equip1").innerHTML = "...";
+document.getElementById("equip1").innerHTML = "giaciglio";
+document.getElementById("equip2").innerHTML = "gavetta";
+document.getElementById("equip3").innerHTML = "acciarino e pietra focaia";
+document.getElementById("equip4").innerHTML = "10 torce";
+document.getElementById("equip5").innerHTML = "1 otre";
+document.getElementById("equip6").innerHTML = "15 m corda di canapa";
 
 // Crediti
-var crediti = 0;
+var crediti = 15;
 document.getElementById("crediti").innerHTML = crediti;
 
 // Punti esperienza
-var xp = 0;
+var xp = 2196;
 
 document.getElementById("xp").innerHTML = xp;
 
 // Armi
-var arma1 = ["cerbottana", 4, 4, 1, 30+" m", "perf.", 1, "-"]
-var arma2 = ["balestra", 4, 4, 1+" d"+8, 20+" m", "perf.", 1, 20]
-var arma3 = ["pugnale", 4, 4, 1+" d"+4, 18+" m", "perf.", 1, "-"]
+var arma1 = ["cerbottana", modMigliorato[0]+modMigliorato[1], modMigliorato[0], 1, 30+" m", "perf.", 1, "-"]
+var arma2 = ["mazza", modMigliorato[0]+modMigliorato[1], modMigliorato[0], 1+" d"+6, "-", "cont.", 1, "-"]
+var arma3 = ["pugnale", modMigliorato[0]+modMigliorato[1], modMigliorato[0], 1+" d"+4, 18+" m", "perf.", 1, "-"]
 
 document.getElementById("arma1").innerHTML = arma1[0];
 document.getElementById("arma1Tc").innerHTML = arma1[1];

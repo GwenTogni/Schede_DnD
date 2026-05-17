@@ -253,7 +253,7 @@ var incantesimo01 = ["luci danzanti", 1+" AZ", 1+" min", 9+" m", 0]; contaIncant
 
 var incantesimo11 = ["luminescenza", 1+" AZ", 1+" h", "incantatore", 0]; contaIncantesimi1++;
 var incantesimo12 = ["parlare con gli animali", 1+" AZ", 10+" min", 18+" m", 0]; contaIncantesimi1++;
-var incantesimo12 = ["colpo intrappolante", 1+" AZ", 10+" min", 18+" m", 0]; contaIncantesimi1++;
+var incantesimo13 = ["colpo intrappolante", 1+" AZ", 10+" min", 18+" m", 0]; contaIncantesimi1++;
 
 var incantesimo21 = ["oscurità", 1+" AZ", 1+" min", "incantatore", 0]; contaIncantesimi2++;
 var incantesimo22 = ["cordone di frecce", 1+" AZ", 1+" h", "contatto", 0]; contaIncantesimi2++;
