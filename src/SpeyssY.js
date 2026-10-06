@@ -2,7 +2,7 @@
 var nome = "Speyss Y"
 var classe = "Tecnomante";
 var razza = "Androide";
-var livello = 9;
+var livello = 10;
 var taglia = "media";
 var velocita = 9;
 var allineamento = "N";
@@ -36,12 +36,12 @@ var modTempra = 0;
 var modRiflessi = 0;
 var modVolonta = 2;
 
-var bonusEnergia = 0;
-var bonusCinetica = 1;
+var bonusEnergia = 5;
+var bonusCinetica = 5;
 
 var budget = 27;
 
-for (var i=0; i<=livello; i++) {
+for (var i=1; i<=livello; i++) {
     if (i == 2) {
         bab++;
         modVolonta++;
@@ -57,7 +57,7 @@ for (var i=0; i<=livello; i++) {
     }else if (i == 4) {
         bab++;
         modVolonta+=2;
-        slot2++;
+        slot2 += 2;
         numeroIncantesimi2+=2;
     } else if (i == 5) {
         slot1++;
@@ -83,6 +83,7 @@ for (var i=0; i<=livello; i++) {
     } else if (i == 9) {
         modTempra++;
         modRiflessi++;
+        slot1++;
         slot3++;
         numeroIncantesimi3++;
     } else if (i == 10) {
@@ -98,6 +99,7 @@ for (var i=0; i<=livello; i++) {
         numeroIncantesimi1++;
     } else if (i == 12) {
         bab++;
+        slot4++;
         modTempra++;
         modRiflessi++;
         modVolonta++;
@@ -109,7 +111,6 @@ for (var i=0; i<=livello; i++) {
     } else if (i == 14) {
         bab++;
         modVolonta++;
-        slot2++;
         slot4++;
         numeroIncantesimi2++;
         numeroIncantesimi5++;
@@ -155,10 +156,10 @@ for (var i=0; i<=livello; i++) {
 }
 
 // Punteggi caratteristica
-var forza = 14;
-var destrezza = 15;
-var costituzione = 14;
-var intelligenza = 14;
+var forza = 16;
+var destrezza = 19;
+var costituzione = 16;
+var intelligenza = 16;
 var saggezza = 9;
 var carisma = 8;
 
@@ -280,7 +281,7 @@ document.getElementById("baLancio").innerHTML = baLancio;
 // Abilità
 var abilita = [acrobazia, atletica, camuffare, computer, cultura, diplomazia, furtivita, ingegneria, intimidire, intuizione, medicina, misticismo, percezione, pilotare, professione, raggirare, rapiditaDiMano, scienzaBiologica, scienzaFisica, sopravvivenza];
 const MOD = [1,0,5,3,3,5,1,3,5,4,3,4,4,1,3,5,1,3,3,4];
-var grado = [5,6,7,5,2,3,3,4,2,7,0,0,5,3,4,3,4,0,0,0];
+var grado = [6,6,10,10,2,0,6,9,0,7,0,0,5,2,7,0,5,5,0,0];
 var bonus = [0,0,0,3,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,1];
 var mVari = [0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0];
 let somma = 0;
@@ -398,6 +399,7 @@ var contaIncantesimi6 = 0;
 document.getElementById("slot1").innerHTML = slot1;
 document.getElementById("slot2").innerHTML = slot2;
 document.getElementById("slot3").innerHTML = slot3;
+document.getElementById("slot4").innerHTML = slot4;
 
 // Livello 0
 var incantesimo01 = ["frastornare", 1+" AZ", 1+" round", 12+" m", 0]; contaIncantesimi0++;
@@ -419,12 +421,17 @@ var incantesimo21 = ["bomba logica", 1+" AZ", 1*livello+" round", "contatto", 6+
 var incantesimo22 = ["invisibilità", 1+" AZ", 1+" min", "contatto", 0]; contaIncantesimi2++;
 var incantesimo23 = ["sigillo di sicurezza", 1+" AZ", 24+" h", 9+" m2", 0]; contaIncantesimi2++;
 var incantesimo24 = ["rete laser", 1+" AZ", 1*livello+" min", 30 + 3*livello+" m", 1+" d"+6+" + "+1]; contaIncantesimi2++;
+var incantesimo25 = ["ottimizza tecnologia", 1+" AZ", 1*livello+" h", 30 + 3*livello+" m", 0]; contaIncantesimi2++;
 
 // Livello 3
 var incantesimo31 = ["orientarsi nella navigazione", 1+" round", 1*livello+" h", 7.5 + 1.5 * Math.trunc(livello/2) +" m", "+ "+10+" pilotare"]; contaIncantesimi3++;
 var incantesimo32 = ["distorsione", 1+" AZ", 1*livello+" round", "contatto", "+ "+50+"% elusione"]; contaIncantesimi3++;
 var incantesimo33 = ["ondata ad arco", 1+" AZ", "istantaneo", 36+" m", 10+" d"+6]; contaIncantesimi3++;
-var incantesimo34 = ["ondata ad arco", 1+" AZ", "istantaneo", 36+" m", 10+" d"+6]; contaIncantesimi3++;
+var incantesimo34 = ["rumentabot guaritore", 1+" round", 1+" round", "contatto", 0]; contaIncantesimi3++;
+
+// Livello 4
+var incantesimo41 = ["rianima costrutto", 1+" AZ", "istantanea", "contatto", 0]; contaIncantesimi4++;
+var incantesimo42 = ["porta digitale", 1+" AZ", 1*livello+" h", "se stesso", 0]; contaIncantesimi4++;
 
 // Livello 0
 document.getElementById("incantesimo01").innerHTML = incantesimo01[0];
@@ -519,6 +526,12 @@ document.getElementById("inc24Durata").innerHTML = incantesimo24[2];
 document.getElementById("inc24Gitt").innerHTML = incantesimo24[3];
 document.getElementById("inc24Danno").innerHTML = incantesimo24[4];
 
+document.getElementById("incantesimo25").innerHTML = incantesimo25[0];
+document.getElementById("inc25Tempo").innerHTML = incantesimo25[1];
+document.getElementById("inc25Durata").innerHTML = incantesimo25[2];
+document.getElementById("inc25Gitt").innerHTML = incantesimo25[3];
+document.getElementById("inc25Danno").innerHTML = incantesimo25[4];
+
 // Livello 3
 document.getElementById("incantesimo31").innerHTML = incantesimo31[0];
 document.getElementById("inc31Tempo").innerHTML = incantesimo31[1];
@@ -543,6 +556,19 @@ document.getElementById("inc34Tempo").innerHTML = incantesimo34[1];
 document.getElementById("inc34Durata").innerHTML = incantesimo34[2];
 document.getElementById("inc34Gitt").innerHTML = incantesimo34[3];
 document.getElementById("inc34Danno").innerHTML = incantesimo34[4];
+
+// Livello 4
+document.getElementById("incantesimo41").innerHTML = incantesimo41[0];
+document.getElementById("inc41Tempo").innerHTML = incantesimo41[1];
+document.getElementById("inc41Durata").innerHTML = incantesimo41[2];
+document.getElementById("inc41Gitt").innerHTML = incantesimo41[3];
+document.getElementById("inc41Danno").innerHTML = incantesimo41[4];
+
+document.getElementById("incantesimo42").innerHTML = incantesimo42[0];
+document.getElementById("inc42Tempo").innerHTML = incantesimo42[1];
+document.getElementById("inc42Durata").innerHTML = incantesimo42[2];
+document.getElementById("inc42Gitt").innerHTML = incantesimo42[3];
+document.getElementById("inc42Danno").innerHTML = incantesimo42[4];
 
 if (contaIncantesimi0 != numeroIncantesimi0 || contaIncantesimi1 != numeroIncantesimi1 || contaIncantesimi2 != numeroIncantesimi2 || contaIncantesimi3 != numeroIncantesimi3 || contaIncantesimi4 != numeroIncantesimi4 || contaIncantesimi5 != numeroIncantesimi5 || contaIncantesimi6 != numeroIncantesimi6) {
     document.getElementById("controlloIncantesimi").style.display = "block";
