@@ -1,12 +1,12 @@
 // Personaggio
-var nome = "Flavio McGuinness"
+var nome = "Indro Blu"
 var classe = "Artificiere";
 var background = "studente di storia navale";
 var razza = "Umana";
 var livello = 1;
 var taglia = "media";
 var velocita = 9;
-var allineamento = "NB";
+var allineamento = "CN";
 
 document.getElementById("nome").innerHTML = nome;
 document.getElementById("classe").innerHTML = classe;
