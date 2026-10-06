@@ -1,9 +1,9 @@
 // Personaggio
 var nome = "Flavio McGuinness"
 var classe = "Barbaro";
-var background = "studente di chimica";
+var background = "chimico neodiplomato";
 var razza = "Umana";
-var livello = 1;
+var livello = 2;
 var taglia = "media";
 var velocita = 9;
 var allineamento = "NB";

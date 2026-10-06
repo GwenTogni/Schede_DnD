@@ -1,12 +1,12 @@
 // Personaggio
-var nome = "Eris Curtis"
-var classe = "Warlock";
-var background = "studentessa di informatica";
+var nome = "Eva Re"
+var classe = "Healer";
+var background = "infermiera neodiplomata";
 var razza = "Umana";
 var livello = 1;
 var taglia = "media";
 var velocita = 9;
-var allineamento = "CB";
+var allineamento = "NB";
 
 document.getElementById("nome").innerHTML = nome;
 document.getElementById("classe").innerHTML = classe;

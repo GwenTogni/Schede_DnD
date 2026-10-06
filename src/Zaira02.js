@@ -1,12 +1,12 @@
 // Personaggio
-var nome = "Flavio McGuinness"
-var classe = "Artificiere";
-var background = "studente di storia navale";
+var nome = "Zaira Zoni"
+var classe = "Ninja";
+var background = "assassino";
 var razza = "Umana";
-var livello = 1;
+var livello = 2;
 var taglia = "media";
 var velocita = 9;
-var allineamento = "NB";
+var allineamento = "LN";
 
 document.getElementById("nome").innerHTML = nome;
 document.getElementById("classe").innerHTML = classe;
@@ -35,12 +35,12 @@ if (livello >= 4) {
     budgetAggiunto += 2;
 }
 
-var forza = 15;
-var destrezza = 11;
-var costituzione = 13;
-var intelligenza = 12;
-var saggezza = 9;
-var carisma = 13;
+var forza = 13;
+var destrezza = 15;
+var costituzione = 14;
+var intelligenza = 11;
+var saggezza = 10;
+var carisma = 9;
 
 let forMigliorata = forza + 1;
 let desMigliorata = destrezza + 1;
@@ -165,11 +165,9 @@ document.getElementById("storia").innerHTML = abilita[17];
 document.getElementById("capacita1").innerHTML = "...";
 
 // Linguaggi
-var lingua = ["italiano", "irlandese", "inglese"]
+var lingua = ["italiano"]
 
 document.getElementById("lingua1").innerHTML = lingua[0];
-document.getElementById("lingua2").innerHTML = lingua[1];
-document.getElementById("lingua3").innerHTML = lingua[2];
 
 // Equipaggiamento
 document.getElementById("equip1").innerHTML = "...";
