@@ -1,7 +1,7 @@
 // Personaggio
 var nome = "Zaira Zoni"
 var classe = "Ninja";
-var background = "assassino";
+var background = "assassina";
 var razza = "Umana";
 var livello = 2;
 var taglia = "media";
