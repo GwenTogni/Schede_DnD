@@ -36,11 +36,11 @@ if (livello >= 4) {
 }
 
 var forza = 16;
-var destrezza = 12;
-var costituzione = 15;
-var intelligenza = 9;
-var saggezza = 8;
-var carisma = 10;
+var destrezza = 10;
+var costituzione = 14;
+var intelligenza = 7;
+var saggezza = 7;
+var carisma = 14;
 
 let forMigliorata = forza + 1;
 let desMigliorata = destrezza + 1;
