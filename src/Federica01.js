@@ -35,12 +35,12 @@ if (livello >= 4) {
     budgetAggiunto += 2;
 }
 
-var forza = 11;
-var destrezza = 15;
+var forza = 13;
+var destrezza = 12;
 var costituzione = 13;
-var intelligenza = 11;
-var saggezza = 13;
-var carisma = 10;
+var intelligenza = 9;
+var saggezza = 11;
+var carisma = 15;
 
 let forMigliorata = forza + 1;
 let desMigliorata = destrezza + 1;
