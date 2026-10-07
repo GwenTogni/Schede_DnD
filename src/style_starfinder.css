@@ -1,14 +1,16 @@
 
 body {
-    background-color: rgb(125, 119, 72);
-    color: #FFF;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* background-color: rgb(67, 81, 93); */
+    background-color: rgb(79, 101, 124);
+    color: rgb(255, 255, 255);
+    font-family: "Electrolize", sans-serif;
     font-size: larger;
     margin: 0;
 }
 
 header {
-    background-color: rgb(71, 80, 39);
+    background-color:rgb(67, 81, 93);
+    border-bottom: 1px solid rgb(166, 255, 0);
     padding: 30px;
     position: fixed;
     width: 100%;
@@ -21,11 +23,10 @@ section {
 }
 
 div {
-    background-color: rgb(102, 112, 68);
+    background-color: rgb(67, 81, 93);
     padding: 30px;
     margin: 0 0 5px 5px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
+    border: 1px solid rgb(166, 255, 0);
 }
 
 nav {
@@ -37,10 +38,10 @@ table {
 }
 td {
     padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(166, 255, 0, 0.6);
 }
 th {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.5);
     padding: 10px;
     text-align: left;
 }
@@ -48,6 +49,21 @@ th {
 li {
     padding: 5px 0 5px 0;
     list-style-type: none;
+}
+
+h1 {
+    font-family: "Turret Road", sans-serif;
+    color: rgb(166, 255, 0);
+}
+
+h2 {
+    font-family: "Turret Road", sans-serif;
+    color: rgb(166, 255, 0);
+}
+
+h3 {
+    font-family: "Turret Road", sans-serif;
+    color: rgb(166, 255, 0);
 }
 
 a {

@@ -1,7 +1,7 @@
 // Personaggio
 var nome = "Aaron Falco"
 var classe = "Ranger";
-var background = "apprendista selvicoltore";
+var background = "selvicoltore";
 var razza = "Umana";
 var livello = 2;
 var taglia = "media";
