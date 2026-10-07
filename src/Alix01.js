@@ -39,7 +39,7 @@ var forza = 11;
 var destrezza = 15;
 var costituzione = 13;
 var intelligenza = 11;
-var saggezza = 13;
+var saggezza = 10;
 var carisma = 10;
 
 let forMigliorata = forza + 1;
